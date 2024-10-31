@@ -1,0 +1,14 @@
+{
+  "zombie": {
+    "health": 100,
+    "damage": 10,
+    "speed": 100,
+    "image": "./config/images/zombie.png"
+  },
+  "skeleton": {
+    "health": 100,
+    "damage": 10,
+    "speed": 80,
+    "image": "./config/images/skeleton.png"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "background": "../images/background.png",
+  "path": "../images/path.png",
+  "grid_size": 21,
+  "home_position": "20,20",
+  "walk_path": [
+    "0,0",
+    "20,0",
+    "20,2",
+    "0,2",
+    "0,4",
+    "20,4",
+    "20,6",
+    "0,6",
+    "0,8",
+    "20,8",
+    "20,10",
+    "0,10",
+    "0,12",
+    "20,12",
+    "20,14",
+    "0,14",
+    "0,16",
+    "20,16",
+    "20,18",
+    "0,18",
+    "0,20",
+    "20,20"
+  ],
+  "waves": {
+    "1": {
+      "spawn_rate": 2.0,
+      "enemies": {
+        "zombie": 5
+      }
+    },
+    "2": {
+      "spawn_rate": 1.5,
+      "enemies": {
+        "zombie": 10,
+        "skeleton": 5
+      }
+    },
+    "3": {
+      "spawn_rate": 1.0,
+      "enemies": {
+        "zombie": 15,
+        "skeleton": 10
+      }
+    }
+  }
+}

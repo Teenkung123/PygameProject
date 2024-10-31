@@ -1,0 +1,12 @@
+{
+  "screen": {
+    "width": 800,
+    "height": 600
+  },
+  "game_settings": {
+    "background_color": [0, 0, 0],
+    "player_health": 100,
+    "wave_delay": 3.0,
+    "debug": true
+  }
+}
