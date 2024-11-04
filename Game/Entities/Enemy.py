@@ -39,7 +39,7 @@ class Enemy(pygame.sprite.Sprite):
             # Scale image to grid size
             self.image = pygame.transform.scale(
                 self.image,
-                (self.grid_size, self.grid_size)
+                (self.grid_size*0.8, self.grid_size*0.8)
             )
             logging.info(f"Loaded image for '{enemy_type}' and scaled to ({self.grid_size}x{self.grid_size}).")
         except pygame.error as e:

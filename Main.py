@@ -1,18 +1,16 @@
-# main.py
-
 import pygame
 import sys
 import os
 import json
 import logging
-from config_loader import ConfigLoader
+from ConfigLoader import ConfigLoader
 from Game.Manager.StageManager import StageManager
 from Game.Manager.WaveManager import WaveManager
 
 # Define the custom event type (ensure consistency with Enemy class)
 ENEMY_REACHED_END = pygame.USEREVENT + 1
 
-# Configure logging (optional if already configured in config_loader.py)
+# Configure logging (optional if already configured in ConfigLoader.py)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -25,53 +23,37 @@ logging.basicConfig(
 class Main:
     def __init__(self):
         # Determine the project root directory
-        self.project_root = os.path.dirname(os.path.abspath(__file__))
-        logging.info(f"Project Root: {self.project_root}")
+        self.__project_root = os.path.dirname(os.path.abspath(__file__))
+        logging.info(f"Project Root: {self.__project_root}")
 
         # Load main configuration
-        self.__load_config()
-
-        # Initialize Pygame
-        pygame.init()
-        try:
-            screen_width = self.config.get("screen", {}).get("width", 800)
-            screen_height = self.config.get("screen", {}).get("height", 600)
-            self.screen = pygame.display.set_mode(
-                (screen_width, screen_height)
-            )
-            pygame.display.set_caption("Pygame Project")
-            logging.info(f"Pygame initialized with screen size ({screen_width}x{screen_height}).")
-        except pygame.error as e:
-            logging.error(f"Error initializing Pygame display: {e}")
-            sys.exit(1)
-
-        # Initialize StageManager
-        try:
-            self.stage_manager = StageManager(
-                "default", self.config, self.screen, self.project_root
-            )
-        except Exception as e:
-            logging.error(f"Failed to initialize StageManager: {e}")
-            sys.exit(1)
+        self.__config = ConfigLoader(os.path.join(self.__project_root, "config", "config.json"))
 
         # Load enemies configuration
         self.enemies_config = self.__load_enemies_config()
 
+        # Initialize Pygame
+        pygame.init()
+        self.__initScreen()
+
+        # Initialize StageManager
+        self.__stage_manager = StageManager(self, "default")
+
         # Get the path
-        self.path = self.stage_manager.get_path()
+        self.path = self.__stage_manager.get_path()
         if not self.path:
             logging.error("No valid path found. Exiting.")
             sys.exit(1)
 
         # Initialize WaveManager
         try:
-            game_settings = self.config.get("game_settings", {})
+            game_settings = self.__config.getConfig().get("game_settings", {})
             self.wave_manager = WaveManager(
-                self.stage_manager.config.get("waves", {}),
+                self.__stage_manager.getStageConfig().getConfig().get("waves", {}),
                 self.enemies_config,
                 self.path,
-                self.stage_manager.grid_size,
-                self.project_root,
+                self.__stage_manager.getStageConfig().getGridSize(),
+                self.__project_root,
                 game_settings
             )
         except Exception as e:
@@ -84,22 +66,22 @@ class Main:
         # Set up fonts
         self.font = pygame.font.SysFont(None, 36)
 
-    def __load_config(self):
+    def __initScreen(self):
         try:
-            self.config = ConfigLoader().get_config()
-            logging.info("Main configuration loaded successfully.")
-        except FileNotFoundError as e:
-            logging.error(e)
-            sys.exit(1)
-        except json.JSONDecodeError as e:
-            logging.error(f"Error parsing main configuration: {e}")
-            sys.exit(1)
-        except Exception as e:
-            logging.error(f"Unexpected error loading main configuration: {e}")
+            screen_width = self.__config.getScreenWidth()
+            screen_height = self.__config.getScreenHeight()
+            self.__screen = pygame.display.set_mode(
+                (screen_width, screen_height)
+            )
+
+            pygame.display.set_caption("Pygame Project")
+            logging.info(f"Pygame initialized with screen size ({screen_width}x{screen_height}).")
+        except pygame.error as e:
+            logging.error(f"Error initializing Pygame display: {e}")
             sys.exit(1)
 
     def __load_enemies_config(self):
-        enemies_config_path = os.path.join(self.project_root, "config", "enemies.json")
+        enemies_config_path = os.path.join(self.__project_root, "config", "enemies.json")
         enemies_config_path = os.path.normpath(enemies_config_path)
         logging.info(f"Loading Enemies Config from: {enemies_config_path}")
 
@@ -144,13 +126,13 @@ class Main:
 
             # Draw the path and background
             try:
-                self.stage_manager.draw()
+                self.__stage_manager.draw()
             except Exception as e:
                 logging.error(f"Error drawing StageManager: {e}")
 
             # Draw enemies
             try:
-                self.wave_manager.draw(self.screen)
+                self.wave_manager.draw(self.__screen)
             except Exception as e:
                 logging.error(f"Error drawing enemies: {e}")
 
@@ -175,19 +157,37 @@ class Main:
     def __draw_ui(self):
         # Display player health
         health_text = self.font.render(f"Health: {self.player_health}", True, (255, 255, 255))
-        self.screen.blit(health_text, (10, 10))
+        self.__screen.blit(health_text, (10, 10))
 
     def __display_game_over(self):
         # Create a simple Game Over screen
         game_over_font = pygame.font.SysFont(None, 72)
         game_over_text = game_over_font.render("GAME OVER", True, (255, 0, 0))
-        text_rect = game_over_text.get_rect(center=(self.config["screen"]["width"]//2, self.config["screen"]["height"]//2))
-        self.screen.blit(game_over_text, text_rect)
+        config = self.__config.getConfig()
+        text_rect = game_over_text.get_rect(
+            center=(
+                config["screen"]["width"] // 2,
+                config["screen"]["height"] // 2
+            )
+        )
+        self.__screen.blit(game_over_text, text_rect)
         pygame.display.flip()
         logging.info("Displayed Game Over screen.")
 
         # Wait for a few seconds before exiting
         pygame.time.delay(3000)
+
+    def getConfig(self) -> ConfigLoader:
+        return self.__config
+
+    def getScreen(self) -> pygame.Surface:
+        return self.__screen
+
+    def getProjectRoot(self) -> str:
+        return self.__project_root
+
+    def getStageManager(self) -> StageManager:
+        return self.__stage_manager
 
 if __name__ == "__main__":
     Main().run()

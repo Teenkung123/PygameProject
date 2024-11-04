@@ -1,8 +1,4 @@
-# Game/Manager/WaveManager.py
-
 import pygame
-import json
-import os
 import logging
 from Game.Entities.Enemy import Enemy
 

@@ -1,5 +1,3 @@
-# config_loader.py
-
 import json
 import os
 import logging
@@ -32,5 +30,14 @@ class ConfigLoader:
             logging.error(f"Error parsing configuration file: {e}")
             raise
 
-    def get_config(self):
+    def getConfig(self):
         return self.config
+
+    def getScreenWidth(self) -> int:
+        return self.config.get("screen", {}).get("width", 800)
+
+    def getScreenHeight(self) -> int:
+        return self.config.get("screen", {}).get("height", 600)
+
+    def getProjectRoot(self):
+        return os.path.dirname(os.path.dirname(self.config_path))

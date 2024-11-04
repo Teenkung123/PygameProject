@@ -1,37 +1,31 @@
 {
-  "background": "../images/background.png",
-  "path": "../images/path.png",
-  "grid_size": 21,
-  "home_position": "20,20",
+  "background": "./config/images/background.png",
+  "path": "./config/images/gold_block.png",
+  "grid_size": 64,
   "walk_path": [
-    "0,0",
-    "20,0",
-    "20,2",
-    "0,2",
-    "0,4",
-    "20,4",
-    "20,6",
-    "0,6",
-    "0,8",
-    "20,8",
-    "20,10",
-    "0,10",
-    "0,12",
-    "20,12",
-    "20,14",
-    "0,14",
-    "0,16",
-    "20,16",
-    "20,18",
-    "0,18",
-    "0,20",
-    "20,20"
+    "1,10",
+    "1,2",
+    "3,2",
+    "3,9",
+    "5,9",
+    "5,2",
+    "7,2",
+    "7,9",
+    "9,9",
+    "9,2",
+    "11,2",
+    "11,9",
+    "13,9",
+    "13,2",
+    "14,2"
+
   ],
   "waves": {
     "1": {
       "spawn_rate": 2.0,
       "enemies": {
-        "zombie": 5
+        "zombie": 5,
+        "skeleton": 2
       }
     },
     "2": {
