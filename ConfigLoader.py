@@ -41,3 +41,6 @@ class ConfigLoader:
 
     def getProjectRoot(self):
         return os.path.dirname(os.path.dirname(self.config_path))
+
+    def getGameSettings(self, key=None):
+        return self.config.get("game_settings", {}).get(key) if key else self.config.get("game_settings", {})

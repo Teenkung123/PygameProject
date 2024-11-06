@@ -1,40 +1,28 @@
+import logging
 import os
 import pygame
-import logging
-from Game.Manager.StageConfig import StageConfig
+from typing import TYPE_CHECKING
 
-class StageManager:
-    def __init__(self, main, stage: str):
-        """
-        Initialize the StageManager.
+if TYPE_CHECKING:
+    from Main import Main
+    from Manager import StageConfig
 
-        :param main: Instance of Main class
-        :param stage: Name of the stage (e.g., "default")
-        """
-        self.main = main
-        logging.info(f"StageManager Initialized with Project Root: {main.getProjectRoot()}")
-
-        # Load stage-specific config
-        self.__stageConfig = StageConfig(main.getProjectRoot(), stage)
-
-        # Access configuration via ConfigLoader methods
-        config_loader = main.getConfig()
-        screen_width = config_loader.getScreenWidth()
-        screen_height = config_loader.getScreenHeight()
-
+class PathElement:
+    def __init__(self, stageConfig: 'StageConfig', main: 'Main', screen: 'pygame.Surface'):
+        self.__stageConfig = stageConfig
+        self.__main = main
+        self.__screen = screen
         self.__grid_size = self.__stageConfig.getGridSize()
+        self.__loadPathImage()
 
-        # Initialize Background here to avoid circular import
-        from Game.Manager.Background import Background  # Import inside method to prevent circular import
-        self.__background = Background(self.__stageConfig, main.getConfig(),  main.getScreen())
-
+    def __loadPathImage(self):
         # Load and scale the path image once
         path_image_relative = self.__stageConfig.getPathImage()
         if not path_image_relative:
             logging.error("No 'path' specified in stage configuration.")
             raise ValueError("Stage configuration must include a 'path' to the path image.")
 
-        path_image_path = os.path.join(main.getProjectRoot(), path_image_relative)
+        path_image_path = os.path.join(self.__main.getProjectRoot(), path_image_relative)
         path_image_path = os.path.normpath(path_image_path)
         logging.info(f"Path Image Path: {path_image_path}")
 
@@ -52,8 +40,9 @@ class StageManager:
 
         # Create a separate surface for the path
         try:
-            self.path_surface = pygame.Surface((screen_width, screen_height), pygame.SRCALPHA)
+            self.path_surface = pygame.Surface((self.__screen.get_width(), self.__screen.get_height()), pygame.SRCALPHA)
             self.__draw_path()
+            logging.info("Path surface created and path drawn successfully.")
         except Exception as e:
             logging.error(f"Error creating path surface: {e}")
             raise
@@ -139,13 +128,8 @@ class StageManager:
         Blit the background and path surfaces onto the main screen.
         """
         try:
-            screen = self.main.getScreen()
+            screen = self.__main.getScreen()
             screen.blit(self.path_surface, (0, 0))
         except Exception as e:
             logging.error(f"Error during StageManager draw: {e}")
 
-    def getStageConfig(self):
-        """
-        Return the StageConfig instance.
-        """
-        return self.__stageConfig

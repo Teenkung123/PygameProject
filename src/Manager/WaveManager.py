@@ -1,6 +1,8 @@
 import pygame
 import logging
-from Game.Entities.Enemy import Enemy
+
+from src.Entities.Enemy import Enemy
+
 
 class WaveManager:
     def __init__(self, waves_config, enemies_config, path, grid_size, project_root, game_settings):

@@ -4,10 +4,10 @@ import pygame
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from Game.Manager.StageConfig import StageConfig
+    from src.Manager.StageConfig import StageConfig
     from ConfigLoader import ConfigLoader
 
-class Background:
+class BackgroundElement:
     def __init__(self, stageConfig: 'StageConfig', mainConfig: 'ConfigLoader', screen: 'pygame.Surface'):
         """
         Initialize the Background.
@@ -45,9 +45,9 @@ class Background:
         else:
             logging.error(f"Background image not found: {background_path}")
             self.background_img = None
-        self.__draw()
+        self.draw()
 
-    def __draw(self):
+    def draw(self):
         """
         Draw the background onto the screen.
         """
