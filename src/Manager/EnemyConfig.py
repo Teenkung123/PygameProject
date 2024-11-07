@@ -5,9 +5,9 @@ import sys
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from Main import Main
+    from Game import Main
 
-class EnemyManager:
+class EnemyConfig:
     def __init__(self, main: 'Main'):
         self.main = main
         self.__loadEnemiesConfig()
@@ -33,5 +33,5 @@ class EnemyManager:
             logging.error(f"Unexpected error loading enemies configuration: {e}")
             sys.exit(1)
 
-    def getEnemiesConfig(self):
+    def getConfig(self):
         return self.__config

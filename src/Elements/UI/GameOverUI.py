@@ -2,7 +2,7 @@ import pygame
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from Main import Main
+    from Game import Main
 
 class GameOverUI:
     def __init__(self, main: 'Main'):

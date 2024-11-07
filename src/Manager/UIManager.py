@@ -6,7 +6,7 @@ from src.Elements.UI.GameOverUI import GameOverUI
 from src.Elements.UI.HealthBarUI import HealthBarUI
 
 if TYPE_CHECKING:
-    from Main import Main
+    from Game import Main
 
 class UIManager:
     def __init__(self, main: 'Main'):

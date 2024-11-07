@@ -42,7 +42,7 @@ class StageConfig:
     def getPathImage(self) -> str:
         return self.config.get("path", "")
 
-    def getWalkPath(self) -> list:
+    def getWalkPath(self) -> list[str]:
         return self.config.get("walk_path", [])
 
     def getWaveConfig(self) -> list:

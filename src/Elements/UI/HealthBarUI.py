@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from Main import Main
+    from Game import Main
 
 class HealthBarUI:
     def __init__(self, main: 'Main', font):

@@ -4,7 +4,7 @@ import pygame
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from Main import Main
+    from Game import Main
     from Manager import StageConfig
 
 class PathElement:
