@@ -4,13 +4,14 @@ import pygame
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from Game import Main
-    from Manager import StageConfig
+    from src.Scenes.GameScene import GameScene
+    from src.GameMechanics import StageConfig
+
 
 class PathElement:
-    def __init__(self, stageConfig: 'StageConfig', main: 'Main', screen: 'pygame.Surface'):
+    def __init__(self, stageConfig: 'StageConfig', gameScene: 'GameScene', screen: 'pygame.Surface'):
         self.__stageConfig = stageConfig
-        self.__main = main
+        self.__main = gameScene
         self.__screen = screen
         self.__grid_size = self.__stageConfig.getGridSize()
         self.__loadPathImage()

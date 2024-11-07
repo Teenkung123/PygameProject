@@ -1,11 +1,11 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from Game import Main
+    from src.Scenes.GameScene import GameScene
 
 class HealthBarUI:
-    def __init__(self, main: 'Main', font):
-        self.__main = main
+    def __init__(self, gameScene: 'GameScene', font):
+        self.__main = gameScene
         self.__font = font
 
     def display(self):

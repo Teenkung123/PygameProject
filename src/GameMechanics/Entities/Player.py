@@ -6,13 +6,13 @@ from src import Events
 from src.Events import PLAYER_DAMAGED
 
 if TYPE_CHECKING:
-    from Game import Main
-    from src.Entities.Enemy import Enemy
+    from src.Scenes.GameScene import GameScene
+    from src.GameMechanics.Entities.Enemy import Enemy
 
 class Player:
-    def __init__(self, main: 'Main'):
-        self.__main = main
-        self.__health = main.getConfig().getGameSettings("player_health")
+    def __init__(self, gameScene: 'GameScene'):
+        self.__main = gameScene
+        self.__health = gameScene.getConfig().getGameSettings("player_health")
 
     def getHealth(self):
         return self.__health

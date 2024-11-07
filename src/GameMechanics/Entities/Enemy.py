@@ -8,17 +8,17 @@ from src import Events
 from src.Events import ENEMY_REACHED_END
 
 if TYPE_CHECKING:
-    from Game import Main
+    from src.Scenes.GameScene import GameScene
 
 class Enemy(pygame.sprite.Sprite):
-    def __init__(self, main: 'Main', enemy_type: str):
+    def __init__(self, gameScene: 'GameScene', enemyType: str):
         super().__init__()
         self.__position = None
-        self.__main = main
-        self.__type = enemy_type
-        self.__config = main.getEnemyConfig().getConfig()[enemy_type]
-        self.__walkPath = main.getStageManager().getStageConfig().getWalkPath()
-        self.__gridSize = main.getStageManager().getStageConfig().getGridSize()
+        self.__main = gameScene
+        self.__type = enemyType
+        self.__config = gameScene.getEnemyConfig().getConfig()[enemyType]
+        self.__walkPath = gameScene.getStageManager().getStageConfig().getWalkPath()
+        self.__gridSize = gameScene.getStageManager().getStageConfig().getGridSize()
         self.__speedMultiplier = 1.0
         self.__sizeMultiplier = 0.8
         self.__currentNode = 0

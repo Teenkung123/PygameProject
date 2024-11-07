@@ -3,17 +3,17 @@ import pygame
 import logging
 from typing import TYPE_CHECKING
 
-from src.Entities.Enemy import Enemy
+from src.GameMechanics.Entities.Enemy import Enemy
 from src.Events import PLAYER_VICTORY
 
 if TYPE_CHECKING:
-    from Main import Main  # Adjust the import based on your project structure
+    from src.Scenes.GameScene import GameScene
 
 class WaveManager:
-    def __init__(self, main: 'Main'):
-        self.__main = main
-        self.__waveConfig = main.getStageManager().getStageConfig().getConfig().get("waves", {})
-        self.__enemyConfig = main.getEnemyConfig().getConfig()
+    def __init__(self, gameScene: 'GameScene'):
+        self.__main = gameScene
+        self.__waveConfig = gameScene.getStageManager().getStageConfig().getConfig().get("waves", {})
+        self.__enemyConfig = gameScene.getEnemyConfig().getConfig()
 
         self.__spawnTimer = 0.0       # Time since last enemy spawn
         self.__spawnRate = 2.0        # Time between enemy spawns (default)
@@ -22,6 +22,8 @@ class WaveManager:
         self.__currentWave = 0        # Current wave number
         self.__waiting = False        # Waiting for next wave
         self.__delay = 0.0            # Time since wave completed
+
+        self.__victory = False        # Is Victory
 
         self.__spawnedEnemy = pygame.sprite.Group()  # Group of spawned enemies
 
@@ -70,6 +72,8 @@ class WaveManager:
         return self.__spawnedEnemy
 
     def __checkWaiting(self, deltaTime: float):
+        if self.__victory:
+            return
         if self.__waiting:
             self.__delay += deltaTime
             wave_delay = self.__main.getConfig().getGameSettings("wave_delay")
@@ -116,7 +120,6 @@ class WaveManager:
     def completeWave(self):
         self.__waiting = True
         self.__spawnTimer = 0.0
-        logging.info(f"Wave {self.__currentWave} completed. Next wave in {self.__delay} seconds.")
 
     def __updateEnemies(self, deltaTime: float):
         try:

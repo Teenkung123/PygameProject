@@ -5,11 +5,11 @@ import sys
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from Game import Main
+    from src.Scenes.GameScene import GameScene
 
 class EnemyConfig:
-    def __init__(self, main: 'Main'):
-        self.main = main
+    def __init__(self, gameScene: 'GameScene'):
+        self.main = gameScene
         self.__loadEnemiesConfig()
 
     def __loadEnemiesConfig(self):

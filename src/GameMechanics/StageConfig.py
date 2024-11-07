@@ -2,16 +2,6 @@ import json
 import logging
 import os
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("game.log"),
-        logging.StreamHandler()
-    ]
-)
-
-
 class StageConfig:
     def __init__(self, project_root, stage):
         config_path = os.path.join(project_root, "config", "stage", f"{stage}.json")
