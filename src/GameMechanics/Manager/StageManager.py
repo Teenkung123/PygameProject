@@ -2,6 +2,7 @@ import logging
 
 import pygame
 
+from src import Events
 from src.GameMechanics.Elements.BackgroundElement import BackgroundElement
 from src.GameMechanics.Elements.PathElement import PathElement
 from src.GameMechanics.StageConfig import StageConfig
@@ -19,6 +20,7 @@ class StageManager:
         self.__stageConfig = StageConfig(gameScene.getProjectRoot(), stage)
         self.__background = BackgroundElement(self.__stageConfig, gameScene.getConfig(), gameScene.getScreen())
         self.__path = PathElement(self.__stageConfig, gameScene, gameScene.getScreen())
+        self.__timeScale = 1.0 #Time Scale, Use in events like time slow or speed up some element of the game, like time stop skill
 
     def getStageConfig(self):
         """
@@ -37,6 +39,12 @@ class StageManager:
         Return the PathElement instance.
         """
         return self.__path
+
+    def getTimeScale(self):
+        """
+        Return the timescale.
+        """
+        return self.__timeScale
 
     def tick(self, deltaTime: float):
         try:
@@ -57,4 +65,10 @@ class StageManager:
         except Exception as e:
             logging.error(f"Error drawing enemies: {e}")
 
+        self.__main.getUIManager()
         self.__main.getUIManager().updateHealthBar()
+        self.__main.getUIManager().updateEnemyHealthBar()
+
+    # noinspection PyMethodMayBeStatic
+    def gameOver(self):
+        pygame.event.post(pygame.event.Event(Events.PLAYER_GAME_OVER))

@@ -6,6 +6,7 @@ import os
 
 from ConfigLoader import ConfigLoader
 from src.EventHandler import EventHandler
+from src.GradientUtils import GradientUtils
 from src.Scenes.GameScene import GameScene
 from src.Scenes.MainMenuScene import MainMenuScene
 
@@ -18,7 +19,9 @@ class Main:
         self.__config = ConfigLoader(os.path.join(self.__projectRoot, "config", "config.json"))
         self.__eventHandler = EventHandler(self)
         self.__screen = None
+        self.__gradientUtils = GradientUtils()
         self.__initScreen__()
+        self.__fontCache = {}
 
         self.__scenes = {
             "game": GameScene(self),
@@ -57,6 +60,14 @@ class Main:
 
     def getConfig(self) -> ConfigLoader:
         return self.__config
+
+    def getFont(self, size: int) -> pygame.font.Font:
+        if size not in self.__fontCache:
+            self.__fontCache[size] = pygame.font.Font('Kanit-Regular.ttf', size)
+        return self.__fontCache[size]
+
+    def getGradientUtils(self) -> GradientUtils:
+        return self.__gradientUtils
 
     def getProjectRoot(self) -> str:
         return self.__projectRoot

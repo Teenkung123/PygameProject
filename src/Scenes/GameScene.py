@@ -1,13 +1,13 @@
-from typing import TYPE_CHECKING
-
 import pygame
 
+from typing import TYPE_CHECKING
 from ConfigLoader import ConfigLoader
 from src.GameMechanics.Entities.Player import Player
 from src.GameMechanics.EnemyConfig import EnemyConfig
 from src.GameMechanics.Manager.StageManager import StageManager
 from src.GameMechanics.Manager.UIManager import UIManager
 from src.GameMechanics.Manager.WaveManager import WaveManager
+from src.GradientUtils import GradientUtils
 from src.Scenes.Scene import Scene
 
 if TYPE_CHECKING:
@@ -16,7 +16,7 @@ if TYPE_CHECKING:
 class GameScene(Scene):
     def __init__(self, main: 'Main'):
         super().__init__()
-        self.__main = main
+        self.__main: 'Main' = main
         self.__enemyConfig = EnemyConfig(self)
         self.__stageManager = StageManager(self, "default")
         self.__UIManager = UIManager(self)
@@ -56,3 +56,9 @@ class GameScene(Scene):
 
     def getUIManager(self) -> UIManager:
         return self.__UIManager
+
+    def getGradientUtils(self) -> GradientUtils:
+        return self.__main.getGradientUtils()
+
+    def getFont(self, size: int) -> pygame.font.Font:
+        return self.__main.getFont(size)
