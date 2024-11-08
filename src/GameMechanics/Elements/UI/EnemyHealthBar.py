@@ -13,6 +13,8 @@ class EnemyHealthBar:
     def display(self):
         for enemy in self.__main.getWaveManager().getEnemies():
             width = enemy.rect.width
+            if enemy.getHealth() == enemy.getMaxHealth():
+                continue
 
             health_ratio = enemy.getHealth() / enemy.getMaxHealth()
             current_health_width = max(int(width * health_ratio), 1)

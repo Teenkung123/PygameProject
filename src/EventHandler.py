@@ -31,4 +31,10 @@ class EventHandler:
                     self.__main.setRunning(False)
                 elif event.type == Events.ENEMY_REACHED_END:
                     scene.getPlayer().doDamage(event.enemy)
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    if event.button == 1:
+                        x, y = pygame.mouse.get_pos()
+                        x = x // 64
+                        y = y // 64
+                        scene.getPlacementManager().place("dispenser", (x, y))
                 #TODO: VICTORY EVENT

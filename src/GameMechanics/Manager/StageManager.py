@@ -5,6 +5,7 @@ import pygame
 from src import Events
 from src.GameMechanics.Elements.BackgroundElement import BackgroundElement
 from src.GameMechanics.Elements.PathElement import PathElement
+from src.GameMechanics.Entities.Tower.Dispenser import Dispenser
 from src.GameMechanics.StageConfig import StageConfig
 from typing import TYPE_CHECKING
 
@@ -21,6 +22,7 @@ class StageManager:
         self.__background = BackgroundElement(self.__stageConfig, gameScene.getConfig(), gameScene.getScreen())
         self.__path = PathElement(self.__stageConfig, gameScene, gameScene.getScreen())
         self.__timeScale = 1.0 #Time Scale, Use in events like time slow or speed up some element of the game, like time stop skill
+
 
     def getStageConfig(self):
         """
@@ -59,11 +61,15 @@ class StageManager:
         except Exception as e:
             logging.error(f"Error drawing StageManager: {e}")
 
+        # Draw towers
+        self.__main.getPlacementManager().tick(deltaTime)
+
         # Draw enemies
         try:
             self.__main.getWaveManager().draw(self.__main.getScreen())
         except Exception as e:
             logging.error(f"Error drawing enemies: {e}")
+
 
         self.__main.getUIManager()
         self.__main.getUIManager().updateHealthBar()

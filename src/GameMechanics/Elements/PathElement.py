@@ -108,7 +108,7 @@ class PathElement:
             # Then, move vertically to y2
             self.__draw_segment((x2, y1), (x2, y2))
 
-    def get_path(self):
+    def getPath(self):
         """
         Return the walk path as a list of (x, y) tuples.
         """
@@ -134,3 +134,58 @@ class PathElement:
         except Exception as e:
             logging.error(f"Error during StageManager draw: {e}")
 
+    def getFullPathCoordinates(self):
+        """
+        Returns a list of pygame.math.Vector2 instances representing
+        each grid position that the path passes through.
+        """
+        path = self.__stageConfig.getConfig().get("walk_path", [])
+        if not path:
+            logging.warning("No walk_path defined in the stage configuration.")
+            return []
+        try:
+            path_coords = [tuple(map(int, coord.split(','))) for coord in path]
+        except ValueError as e:
+            logging.error(f"Error parsing walk_path coordinates: {e}")
+            return []
+
+        full_path = []
+        for i in range(len(path_coords) - 1):
+            start = path_coords[i]
+            end = path_coords[i + 1]
+            segment_positions = self.__get_segment_positions(start, end)
+            if i > 0:
+                # Avoid duplicating the starting point of each segment except the first one
+                segment_positions = segment_positions[1:]
+            full_path.extend(segment_positions)
+        # Convert tuples to pygame.math.Vector2 instances
+        return [pygame.math.Vector2(pos) for pos in full_path]
+
+    def __get_segment_positions(self, start, end):
+        """
+        Returns a list of positions for the segment between start and end.
+        """
+        positions = []
+        x1, y1 = start
+        x2, y2 = end
+
+        if x1 == x2:
+            # Vertical movement
+            step = 1 if y2 > y1 else -1
+            for y in range(y1, y2 + step, step):
+                positions.append((x1, y))
+        elif y1 == y2:
+            # Horizontal movement
+            step = 1 if x2 > x1 else -1
+            for x in range(x1, x2 + step, step):
+                positions.append((x, y1))
+        else:
+            # Diagonal or unsupported movement
+            logging.warning(
+                f"Diagonal movement detected from {start} to {end}. Splitting into horizontal and vertical segments."
+            )
+            # First, move horizontally to x2
+            positions.extend(self.__get_segment_positions((x1, y1), (x2, y1)))
+            # Then, move vertically to y2
+            positions.extend(self.__get_segment_positions((x2, y1), (x2, y2)))
+        return positions

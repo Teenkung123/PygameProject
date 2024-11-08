@@ -68,7 +68,7 @@ class WaveManager:
         except Exception as e:
             logging.error(f"Error drawing enemies: {e}")
 
-    def getEnemies(self):
+    def getEnemies(self) -> pygame.sprite.Group:
         return self.__spawnedEnemy
 
     def __checkWaiting(self, deltaTime: float):
