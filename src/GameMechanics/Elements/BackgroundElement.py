@@ -4,7 +4,7 @@ import pygame
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from src.GameMechanics.StageConfig import StageConfig
+    from src.GameMechanics.Configs.StageConfig import StageConfig
     from ConfigLoader import ConfigLoader
 
 class BackgroundElement:

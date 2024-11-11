@@ -5,8 +5,7 @@ import pygame
 from src import Events
 from src.GameMechanics.Elements.BackgroundElement import BackgroundElement
 from src.GameMechanics.Elements.PathElement import PathElement
-from src.GameMechanics.Entities.Tower.Dispenser import Dispenser
-from src.GameMechanics.StageConfig import StageConfig
+from src.GameMechanics.Configs.StageConfig import StageConfig
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -71,11 +70,10 @@ class StageManager:
             logging.error(f"Error drawing enemies: {e}")
 
 
-        self.__main.getUIManager()
+        self.__main.getUIManager().getHurtUI().tick(deltaTime)
         self.__main.getUIManager().updateHealthBar()
         self.__main.getUIManager().updateEnemyHealthBar()
         self.__main.getUIManager().updateHotbarInventory()
-
     # noinspection PyMethodMayBeStatic
     def gameOver(self):
         pygame.event.post(pygame.event.Event(Events.PLAYER_GAME_OVER))

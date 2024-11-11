@@ -3,7 +3,7 @@ import pygame
 from typing import TYPE_CHECKING
 from ConfigLoader import ConfigLoader
 from src.GameMechanics.Entities.Player import Player
-from src.GameMechanics.EnemyConfig import EnemyConfig
+from src.GameMechanics.Configs.EnemyConfig import EnemyConfig
 from src.GameMechanics.Manager.InventoryManager import InventoryManager
 from src.GameMechanics.Manager.PlacementManager import PlacementManager
 from src.GameMechanics.Manager.StageManager import StageManager
@@ -25,7 +25,7 @@ class GameScene(Scene):
         self.__player = Player(self)
         self.__waveManager = WaveManager(self)
         self.__placementManager = PlacementManager(self)
-        self.__InventoryManager = InventoryManager(self, self.__UIManager.hotbarUI)
+        self.__InventoryManager = InventoryManager(self, self.__UIManager.__hotbarUI)
 
     def tick(self, dt: float):
         self.__stageManager.tick(dt)
@@ -37,7 +37,7 @@ class GameScene(Scene):
         self.__player = Player(self)
         self.__waveManager = WaveManager(self)
         self.__placementManager = PlacementManager(self)
-        self.__InventoryManager = InventoryManager(self, self.__UIManager.hotbarUI)
+        self.__InventoryManager = InventoryManager(self, self.__UIManager.__hotbarUI)
 
     def getConfig(self) -> ConfigLoader:
         return self.__main.getConfig()

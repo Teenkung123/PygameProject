@@ -92,7 +92,8 @@ class InventoryUI:
                 alpha=255,
                 hover_alpha=128,
                 selected_alpha=128,
-                text="test",
+                text="",
+                text_color=(255, 128, 0),
                 text_valign="bottom",
             )
             self.__buttons.append(button)

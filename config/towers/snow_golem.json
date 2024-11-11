@@ -2,27 +2,27 @@
   "max_level": 4,
   "image": "config/images/pumpkin_top.png",
   "1": {
-    "damage": 20,
-    "speed": 1,
-    "range": 2,
-    "cost": 50
-  },
-  "2": {
-    "damage": 30,
-    "speed": 3,
+    "damage": 5,
+    "speed": 2,
     "range": 2.5,
     "cost": 100
   },
-  "3": {
-    "damage": 40,
+  "2": {
+    "damage": 7,
     "speed": 2,
     "range": 2.5,
-    "cost": 150
+    "cost": 125
+  },
+  "3": {
+    "damage": 9,
+    "speed": 1.5,
+    "range": 2.5,
+    "cost": 200
   },
   "4": {
-    "damage": 40,
-    "speed": 1.175,
+    "damage": 15,
+    "speed": 1,
     "range": 3,
-    "cost": 200
+    "cost": 300
   }
 }
