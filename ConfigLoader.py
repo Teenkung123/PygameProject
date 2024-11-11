@@ -2,16 +2,6 @@ import json
 import os
 import logging
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("game.log"),
-        logging.StreamHandler()
-    ]
-)
-
 class ConfigLoader:
     def __init__(self, config_path="config/config.json"):
         self.config_path = os.path.normpath(config_path)
