@@ -13,5 +13,5 @@ class SnowGolem(Tower):
         return "snow_golem.json"
 
     def _applyEffect(self, enemy: "Enemy"):
-        enemy.setSpeedMultiplier("snow_golem", 0.25)
+        enemy.setSpeedMultiplier("snow_golem", 0.25, 5000)
         enemy.decreaseHealth(self._damage)

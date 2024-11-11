@@ -2,13 +2,13 @@
   "zombie": {
     "health": 100,
     "damage": 10,
-    "speed": 10,
+    "speed": 50,
     "image": "./config/images/zombie.png"
   },
   "skeleton": {
     "health": 100,
     "damage": 10,
-    "speed": 0,
+    "speed": 75,
     "image": "./config/images/skeleton.png"
   }
 }

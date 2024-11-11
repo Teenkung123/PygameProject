@@ -8,5 +8,11 @@
     "player_health": 100,
     "wave_delay": 3.0,
     "debug": true
+  },
+  "inventory": {
+    "slots": {
+      "0": "dispenser",
+      "1": "snow_golem"
+    }
   }
 }

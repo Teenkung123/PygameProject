@@ -44,3 +44,6 @@ class ConfigLoader:
 
     def getGameSettings(self, key=None):
         return self.config.get("game_settings", {}).get(key) if key else self.config.get("game_settings", {})
+
+    def getInventory(self):
+        return self.config.get("inventory", {}) if self.config.get("inventory") else {}
