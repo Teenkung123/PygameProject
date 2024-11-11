@@ -14,7 +14,7 @@ class UIManager:
         self.__gameOverUI = GameOverUI(gameScene)
         self.__healthUI = HealthBarUI(gameScene)
         self.__EnemyHealthUI = EnemyHealthBar(gameScene)
-        self.__hotbarUI = InventoryUI(gameScene)
+        self.hotbarUI = InventoryUI(gameScene)
         self.__hurtUI = HurtUI(gameScene)
 
     def displayGameOver(self):
@@ -27,7 +27,7 @@ class UIManager:
         self.__EnemyHealthUI.display()
 
     def updateHotbarInventory(self):
-        self.__hotbarUI.display()
+        self.hotbarUI.display()
 
     def getHurtUI(self):
         return self.__hurtUI

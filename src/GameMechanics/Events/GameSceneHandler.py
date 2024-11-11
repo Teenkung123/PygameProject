@@ -19,7 +19,7 @@ class GameSceneHandler:
 
     def handle(self, event):
         scene: GameScene = self.__main.getCurrentScene()
-        scene.getUIManager().__hotbarUI.handle_event(event)
+        scene.getUIManager().hotbarUI.handle_event(event)
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             self.__main.setCurrentScene("main")
             self.__main.resetScene("game")

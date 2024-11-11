@@ -25,7 +25,7 @@ class GameScene(Scene):
         self.__player = Player(self)
         self.__waveManager = WaveManager(self)
         self.__placementManager = PlacementManager(self)
-        self.__InventoryManager = InventoryManager(self, self.__UIManager.__hotbarUI)
+        self.__InventoryManager = InventoryManager(self, self.__UIManager.hotbarUI)
 
     def tick(self, dt: float):
         self.__stageManager.tick(dt)
@@ -37,7 +37,7 @@ class GameScene(Scene):
         self.__player = Player(self)
         self.__waveManager = WaveManager(self)
         self.__placementManager = PlacementManager(self)
-        self.__InventoryManager = InventoryManager(self, self.__UIManager.__hotbarUI)
+        self.__InventoryManager = InventoryManager(self, self.__UIManager.hotbarUI)
 
     def getConfig(self) -> ConfigLoader:
         return self.__main.getConfig()
