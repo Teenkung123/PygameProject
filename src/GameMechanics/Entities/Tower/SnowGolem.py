@@ -8,9 +8,10 @@ if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene
     from src.GameMechanics.Entities.Enemy import Enemy
 
-class Dispenser(Tower):
+class SnowGolem(Tower):
     def _getConfigFileName(self):
-        return "dispenser.json"
+        return "snow_golem.json"
 
     def _applyEffect(self, enemy: "Enemy"):
+        enemy.setSpeedMultiplier("snow_golem", 0.25)
         enemy.decreaseHealth(self._damage)

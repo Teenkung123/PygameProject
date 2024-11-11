@@ -74,6 +74,7 @@ class StageManager:
         self.__main.getUIManager()
         self.__main.getUIManager().updateHealthBar()
         self.__main.getUIManager().updateEnemyHealthBar()
+        self.__main.getUIManager().updateHotbarInventory()
 
     # noinspection PyMethodMayBeStatic
     def gameOver(self):

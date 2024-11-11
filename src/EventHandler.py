@@ -3,6 +3,7 @@ import pygame
 from src import Events
 from typing import TYPE_CHECKING
 
+from src.MainMenuMechanics.MainMenuEventHandler import MainMenuEventHandler
 from src.Scenes.GameScene import GameScene
 
 if TYPE_CHECKING:
@@ -11,6 +12,7 @@ if TYPE_CHECKING:
 class EventHandler:
     def __init__(self, main: 'Main'):
         self.__main = main
+        self.__mainMenuHandler = MainMenuEventHandler(main)
 
     def handle(self):
         for event in pygame.event.get():
@@ -18,8 +20,7 @@ class EventHandler:
                 self.__main.setRunning(False)
 
             if self.__main.getCurrentSceneName() == "main":
-                if event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN:
-                    self.__main.setCurrentScene("game")
+                self.__mainMenuHandler.handle(event)
 
             if self.__main.getCurrentSceneName() == "game":
                 scene: GameScene = self.__main.getCurrentScene()

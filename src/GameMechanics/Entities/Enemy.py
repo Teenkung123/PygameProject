@@ -6,7 +6,6 @@ import pygame
 
 from src import Events
 from src.Events import ENEMY_REACHED_END
-from src.GameMechanics.Elements.UI.EnemyHealthBar import EnemyHealthBar
 
 if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene
@@ -20,7 +19,7 @@ class Enemy(pygame.sprite.Sprite):
         self.__config = gameScene.getEnemyConfig().getConfig()[enemyType]
         self.__walkPath = gameScene.getStageManager().getStageConfig().getWalkPath()
         self.__gridSize = gameScene.getStageManager().getStageConfig().getGridSize()
-        self.__speedMultiplier = 1.0
+        self.__speedMultiplier = {}
         self.__sizeMultiplier = 0.8
         self.__currentNode = 0
         self.__maxHealth = 100
@@ -86,7 +85,7 @@ class Enemy(pygame.sprite.Sprite):
             return
         direction = direction.normalize()
         
-        movement = direction * (self.__speed * self.__sizeMultiplier) * deltaTime
+        movement = direction * (self.__speed * (1-sum([s for s in self.__speedMultiplier.values()]))) * deltaTime
         if movement.length() > distance:
             self.__position = target
             self.__currentNode += 1
@@ -129,8 +128,8 @@ class Enemy(pygame.sprite.Sprite):
     def getSpeedMultiplier(self):
         return self.__speedMultiplier
 
-    def setSpeedMultiplier(self, multiplier: float):
-        self.__speedMultiplier = multiplier
+    def setSpeedMultiplier(self, key: str, multiplier: float):
+        self.__speedMultiplier[key] = multiplier
 
     def setHealth(self, health: int):
         self.__health = health

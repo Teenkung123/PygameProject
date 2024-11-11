@@ -1,0 +1,28 @@
+{
+  "max_level": 4,
+  "image": "config/images/dispenser_front.png",
+  "1": {
+    "damage": 20,
+    "speed": 1,
+    "range": 2,
+    "cost": 50
+  },
+  "2": {
+    "damage": 30,
+    "speed": 3,
+    "range": 2.5,
+    "cost": 100
+  },
+  "3": {
+    "damage": 40,
+    "speed": 2,
+    "range": 2.5,
+    "cost": 150
+  },
+  "4": {
+    "damage": 40,
+    "speed": 1.175,
+    "range": 3,
+    "cost": 200
+  }
+}
