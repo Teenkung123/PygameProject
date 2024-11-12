@@ -52,14 +52,14 @@ class InventoryUI:
     def __setSlotPosition(self):
         self.__original_slot_positions = [
             Vector2(13, 12),
-            Vector2(92, 12),
-            Vector2(172, 12),
-            Vector2(252, 12),
-            Vector2(332, 12),
-            Vector2(412, 12),
-            Vector2(492, 12),
-            Vector2(572, 12),
-            Vector2(652, 12)
+            Vector2(93, 13),
+            Vector2(174, 13),
+            Vector2(254, 13),
+            Vector2(334, 13),
+            Vector2(414, 13),
+            Vector2(494, 13),
+            Vector2(574, 13),
+            Vector2(654, 13)
         ]
         logging.debug("Original slot positions defined.")
 

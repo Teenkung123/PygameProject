@@ -8,7 +8,7 @@
   "skeleton": {
     "health": 100,
     "damage": 10,
-    "speed": 75,
+    "speed": 750,
     "image": "./config/images/skeleton.png"
   }
 }
