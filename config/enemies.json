@@ -1,14 +1,14 @@
 {
-  "zombie": {
+  "coal": {
     "health": 100,
     "damage": 10,
-    "speed": 50,
-    "image": "./config/images/zombie.png"
+    "speed": 40,
+    "image": "./config/images/Mobs/minion_coal.png"
   },
-  "skeleton": {
+  "copper": {
     "health": 100,
     "damage": 10,
-    "speed": 750,
-    "image": "./config/images/skeleton.png"
+    "speed": 60,
+    "image": "./config/images/Mobs/minion_copper.png"
   }
 }

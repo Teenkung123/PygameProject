@@ -6,7 +6,9 @@ if TYPE_CHECKING:
 class CurrencyManager:
     def __init__(self, gameScene: 'GameScene'):
         self.__gameScene = gameScene
-        self.__currencies = {}
+        self.__currencies = {
+            "gold": 75
+        }
 
     def getCurrency(self, currencyType: str):
         """

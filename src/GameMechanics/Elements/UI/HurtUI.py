@@ -18,11 +18,10 @@ class HurtUI:
         self.__button.draw(self.__gameScene.getScreen())
         if self.__delay > 0:
             self.__delay -= dt
-            logging.info(f"Delay: {self.__delay}")
+            self.__button.alpha = max(self.__delay/0.25 * 128, 0)
             if self.__delay <= 0:
                 self.__button.alpha = 0
 
     def hurt(self):
         self.__button.alpha = 128
         self.__delay = 0.25
-

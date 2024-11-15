@@ -21,6 +21,7 @@ class StageManager:
         self.__background = BackgroundElement(self.__stageConfig, gameScene.getConfig(), gameScene.getScreen())
         self.__path = PathElement(self.__stageConfig, gameScene, gameScene.getScreen())
         self.__timeScale = 1.0 #Time Scale, Use in events like time slow or speed up some element of the game, like time stop skill
+        self.__isPaused = False
 
 
     def getStageConfig(self):
@@ -48,32 +49,36 @@ class StageManager:
         return self.__timeScale
 
     def tick(self, deltaTime: float):
-        try:
+        if self.__main.getUIManager().pauseUI.getPauseTimeMultiplier() > 0:
             self.__main.getWaveManager().update(deltaTime)
-        except Exception as e:
-            logging.error(f"Error updating WaveManager: {e}")
+            self.__main.getPlacementManager().tick(deltaTime)
+            self.__main.getUIManager().currencyUI.tick(deltaTime)
 
-        # Draw the path and background
-        try:
-            self.__main.getStageManager().getBackground().draw()
-            self.__main.getStageManager().getPath().draw()
-        except Exception as e:
-            logging.error(f"Error drawing StageManager: {e}")
-
-        # Draw towers
-        self.__main.getPlacementManager().tick(deltaTime)
-
-        # Draw enemies
-        try:
-            self.__main.getWaveManager().draw(self.__main.getScreen())
-        except Exception as e:
-            logging.error(f"Error drawing enemies: {e}")
-
+        self.__main.getStageManager().getBackground().draw()
+        self.__main.getStageManager().getPath().draw()
+        self.__main.getPlacementManager().draw()
+        self.__main.getWaveManager().draw()
 
         self.__main.getUIManager().getHurtUI().tick(deltaTime)
         self.__main.getUIManager().updateHealthBar()
+        self.__main.getUIManager().updateCurrency()
         self.__main.getUIManager().updateEnemyHealthBar()
         self.__main.getUIManager().updateHotbarInventory()
+
+        if self.__main.getUIManager().pauseUI.getPauseTimeMultiplier() > 0:
+            self.__main.getUIManager().towerStatusUI.draw()
+
+        self.__main.getUIManager().pauseUI.tick(deltaTime)
     # noinspection PyMethodMayBeStatic
     def gameOver(self):
         pygame.event.post(pygame.event.Event(Events.PLAYER_GAME_OVER))
+
+    def pauseGame(self, state: bool = None):
+        if state is not None:
+            logging.info(f"Game Paused: {state}")
+            self.__isPaused = state
+        else:
+            self.__isPaused = not self.__isPaused
+
+    def isPaused(self):
+        return self.__isPaused

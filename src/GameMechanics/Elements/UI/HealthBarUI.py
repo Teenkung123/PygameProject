@@ -11,7 +11,7 @@ class HealthBarUI:
     def __init__(self, gameScene: 'GameScene'):
         self.__main = gameScene
         self.__font = gameScene.getFont(12)
-        self.__heartImg = pygame.image.load("config/images/heart.png")
+        self.__heartImg = pygame.image.load("config/images/UI/heart.png")
         self.__heartImg = pygame.transform.scale(self.__heartImg, (30, 30))
 
     def __drawBar(self):

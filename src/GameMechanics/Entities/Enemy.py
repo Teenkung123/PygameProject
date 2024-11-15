@@ -19,16 +19,18 @@ class Enemy(pygame.sprite.Sprite):
         self.__config = gameScene.getEnemyConfig().getConfig()[enemyType]
         self.__walkPath = gameScene.getStageManager().getStageConfig().getWalkPath()
         self.__gridSize = gameScene.getStageManager().getStageConfig().getGridSize()
-        self.__speedMultipliers = {}  # Changed to store details per effect
+        self.__speedMultipliers = {}
         self.__sizeMultiplier = 0.8
         self.__currentNode = 0
         self.__maxHealth = 100
         self.__health = 100
         self.__damage = 10
         self.__speed = 100
+        self.__reward = 10
         self.image = None
         self.__loadEnemy()
-        # Removed self.__overlay since it's no longer needed
+        self.__effects = {'bleeding': [], 'burning': []}
+        self.__total_path_length = self.__calculate_total_path_length()
 
     def __loadEnemy(self):
         if not self.__config:
@@ -38,6 +40,7 @@ class Enemy(pygame.sprite.Sprite):
         self.__speed = self.__config.get("speed", 100)
         self.__damage = self.__config.get("damage", 10)
         self.__maxHealth = self.__config.get("health", 100)
+        self.__reward = self.__config.get("reward", 10)
         self.__health = self.__maxHealth
         self.__loadImage()
 
@@ -76,6 +79,7 @@ class Enemy(pygame.sprite.Sprite):
 
         # Update speed multipliers durations and remove expired ones
         self.__update_speed_multipliers(deltaTime)
+        self.__updateEffects(deltaTime)
 
         if self.__currentNode >= len(self.__walkPath) - 1:
             self.kill()
@@ -103,7 +107,7 @@ class Enemy(pygame.sprite.Sprite):
         speed_multiplier = 1.0 - total_speed_multiplier  # Remaining speed percentage
         speed_multiplier = max(speed_multiplier, 0.0)  # Ensure speed doesn't go negative
 
-        movement = direction * (self.__speed * speed_multiplier) * deltaTime
+        movement = direction * (self.__speed * speed_multiplier) * (deltaTime * self.__main.getUIManager().pauseUI.getPauseTimeMultiplier())
         if movement.length() > distance:
             self.__position = target
             self.__currentNode += 1
@@ -121,11 +125,33 @@ class Enemy(pygame.sprite.Sprite):
         for key in expired_effects:
             del self.__speedMultipliers[key]
 
+    def __updateEffects(self, deltaTime: float):
+        # Update bleeding effects
+        expired_bleeding = []
+        for effect in self.__effects['bleeding']:
+            effect['duration'] -= deltaTime * 1000
+            if effect['duration'] <= 0:
+                expired_bleeding.append(effect)
+            else:
+                self.decreaseHealth(effect['damage'] * deltaTime)
+        for effect in expired_bleeding:
+            self.__effects['bleeding'].remove(effect)
+
+        # Update burning effects
+        expired_burning = []
+        for effect in self.__effects['burning']:
+            effect['duration'] -= deltaTime * 1000
+            if effect['duration'] <= 0:
+                expired_burning.append(effect)
+            else:
+                self.decreaseHealth(effect['damage'] * deltaTime)
+        for effect in expired_burning:
+            self.__effects['burning'].remove(effect)
+
     def draw(self):
         try:
             # Blit the enemy image onto the screen
             self.__main.getScreen().blit(self.image, self.rect)
-            # Removed overlay drawing code
         except Exception as e:
             logging.error(f"Error drawing enemy: {e}")
 
@@ -150,8 +176,8 @@ class Enemy(pygame.sprite.Sprite):
             del self.__speedMultipliers[key]
 
     def killEnemy(self):
+        pygame.event.post(pygame.event.Event(Events.ENEMY_KILLED, enemy=self))
         self.kill()
-        pygame.event.post(Events.ENEMY_KILLED)
 
     def getPosition(self):
         return self.__position
@@ -177,15 +203,54 @@ class Enemy(pygame.sprite.Sprite):
     def setHealth(self, health: int):
         self.__health = health
         if self.__health <= 0:
-            self.kill()
+            self.killEnemy()
 
     def decreaseHealth(self, damage: int):
         self.__health -= damage
         if self.__health <= 0:
-            self.kill()
+            self.killEnemy()
 
     def isAlive(self):
         return self.__health > 0 and self.alive()
 
     def getType(self):
         return self.__type
+
+    def setReward(self, reward: int):
+        self.__reward = reward
+
+    def getReward(self):
+        return self.__reward
+
+    def applyBleeding(self, damage, duration):
+        self.__effects['bleeding'].append({'damage': damage, 'duration': duration})
+
+    def applyBurning(self, damage, duration):
+        self.__effects['burning'].append({'damage': damage, 'duration': duration})
+
+    def __calculate_total_path_length(self):
+        # Calculate the total length of the path for progress calculation
+        total_length = 0
+        for i in range(len(self.__walkPath) - 1):
+            current_node_coords = list(map(int, self.__walkPath[i].split(",")))
+            next_node_coords = list(map(int, self.__walkPath[i + 1].split(",")))
+            current_node = pygame.math.Vector2(current_node_coords[0], current_node_coords[1])
+            next_node = pygame.math.Vector2(next_node_coords[0], next_node_coords[1])
+            total_length += current_node.distance_to(next_node)
+        return total_length
+
+    def getProgress(self):
+        # Calculate how far the enemy has progressed along the path
+        progress = 0
+        for i in range(self.__currentNode):
+            current_node_coords = list(map(int, self.__walkPath[i].split(",")))
+            next_node_coords = list(map(int, self.__walkPath[i + 1].split(",")))
+            current_node = pygame.math.Vector2(current_node_coords[0], current_node_coords[1])
+            next_node = pygame.math.Vector2(next_node_coords[0], next_node_coords[1])
+            progress += current_node.distance_to(next_node)
+        # Add the distance from current position to next node
+        if self.__currentNode < len(self.__walkPath) - 1:
+            next_node_coords = list(map(int, self.__walkPath[self.__currentNode + 1].split(",")))
+            next_node = pygame.math.Vector2(next_node_coords[0], next_node_coords[1])
+            progress += self.__position.distance_to(next_node)
+        return progress / self.__total_path_length

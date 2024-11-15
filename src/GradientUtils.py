@@ -13,18 +13,13 @@ class GradientUtils:
     ) -> Optional[pygame.Surface]:
         """
         Creates or retrieves a vertical gradient surface with multi-color support.
-
-        :param width: Width of the gradient surface.
-        :param height: Height of the gradient surface.
-        :param colors: List of RGB tuples representing colors from top to bottom.
-        :return: Pygame Surface with the vertical gradient or None if an error occurs.
         """
         key = ('vertical', width, height, tuple(colors))
         if key in self.cache:
             return self.cache[key]
 
         try:
-            gradient = pygame.Surface((width, height))
+            gradient = pygame.Surface((width, height), pygame.SRCALPHA)
             num_colors = len(colors)
             if num_colors < 2:
                 raise ValueError("At least two colors are required for a gradient.")
@@ -51,18 +46,13 @@ class GradientUtils:
     ) -> Optional[pygame.Surface]:
         """
         Creates or retrieves a horizontal gradient surface with multi-color support.
-
-        :param width: Width of the gradient surface.
-        :param height: Height of the gradient surface.
-        :param colors: List of RGB tuples representing colors from left to right.
-        :return: Pygame Surface with the horizontal gradient or None if an error occurs.
         """
         key = ('horizontal', width, height, tuple(colors))
         if key in self.cache:
             return self.cache[key]
 
         try:
-            gradient = pygame.Surface((width, height))
+            gradient = pygame.Surface((width, height), pygame.SRCALPHA)
             num_colors = len(colors)
             if num_colors < 2:
                 raise ValueError("At least two colors are required for a gradient.")
@@ -89,27 +79,22 @@ class GradientUtils:
     ) -> Optional[pygame.Surface]:
         """
         Creates or retrieves a diagonal gradient surface with multi-color support.
-
-        :param width: Width of the gradient surface.
-        :param height: Height of the gradient surface.
-        :param colors: List of RGB tuples representing colors along the diagonal.
-        :return: Pygame Surface with the diagonal gradient or None if an error occurs.
         """
         key = ('diagonal', width, height, tuple(colors))
         if key in self.cache:
             return self.cache[key]
 
         try:
-            gradient = pygame.Surface((width, height))
+            gradient = pygame.Surface((width, height), pygame.SRCALPHA)
             num_colors = len(colors)
             if num_colors < 2:
                 raise ValueError("At least two colors are required for a gradient.")
 
-            max_distance = (width**2 + height**2) ** 0.5
+            max_distance = (width + height)
             for y in range(height):
                 for x in range(width):
-                    distance = (x + y) / (width + height)
-                    color = self._get_multi_color(colors, distance)
+                    position = (x + y) / max_distance
+                    color = self._get_multi_color(colors, position)
                     gradient.set_at((x, y), color)
             self.cache[key] = gradient
             return gradient
@@ -122,12 +107,6 @@ class GradientUtils:
     ) -> Optional[pygame.Surface]:
         """
         Creates or retrieves a radial gradient surface with multi-color support.
-
-        :param width: Width of the gradient surface.
-        :param height: Height of the gradient surface.
-        :param colors: List of RGB tuples representing colors from center to edge.
-        :param center: Tuple representing the center point (x, y). Defaults to center of surface.
-        :return: Pygame Surface with the radial gradient or None if an error occurs.
         """
         key = ('radial', width, height, tuple(colors), center)
         if key in self.cache:
@@ -168,11 +147,6 @@ class GradientUtils:
     ) -> Tuple[int, int, int]:
         """
         Interpolates between two colors by a factor.
-
-        :param start_color: RGB tuple for the start color.
-        :param end_color: RGB tuple for the end color.
-        :param factor: Float between 0 and 1 representing the interpolation factor.
-        :return: Interpolated RGB color.
         """
         return (
             int(start_color[0] + (end_color[0] - start_color[0]) * factor),
@@ -183,10 +157,6 @@ class GradientUtils:
     def _get_multi_color(self, colors: List[Tuple[int, int, int]], position: float) -> Tuple[int, int, int]:
         """
         Gets the interpolated color for a position in a multi-color gradient.
-
-        :param colors: List of RGB color tuples.
-        :param position: Float between 0 and 1 indicating the position in the gradient.
-        :return: Interpolated RGB color.
         """
         num_colors = len(colors)
         total_segments = num_colors - 1

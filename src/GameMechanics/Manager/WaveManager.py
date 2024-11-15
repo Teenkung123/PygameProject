@@ -62,9 +62,9 @@ class WaveManager:
         self.__checkWaveCompleted()
         self.__updateEnemies(deltaTime)
 
-    def draw(self, screen):
+    def draw(self):
         try:
-            self.__spawnedEnemy.draw(screen)
+            self.__spawnedEnemy.draw(self.__main.getScreen())
         except Exception as e:
             logging.error(f"Error drawing enemies: {e}")
 
@@ -126,5 +126,3 @@ class WaveManager:
             self.__spawnedEnemy.update(deltaTime)
         except Exception as e:
             logging.error(f"Error updating WaveManager: {e}")
-
-

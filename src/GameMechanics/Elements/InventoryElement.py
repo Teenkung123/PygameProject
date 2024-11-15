@@ -14,7 +14,7 @@ class InventoryUI:
     def __init__(self, gameScene: 'GameScene'):
         self.selected_slot = None
         self.__main = gameScene
-        self.__font = gameScene.getFont(12)
+        self.__font = gameScene.getFont(14)
         self.__slotDisplays: dict[int, dict] = {
             0: {},
             1: {},
@@ -33,7 +33,7 @@ class InventoryUI:
         self.__initButtons()
 
     def __loadImage(self):
-        path = os.path.join(self.__main.getProjectRoot(), "config", "images", "hotbar.png")
+        path = os.path.join(self.__main.getProjectRoot(), "config", "images", "UI","hotbar.png")
         image_path = os.path.normpath(path)
         if not os.path.exists(image_path):
             logging.error(f"InventoryUI image not found: {image_path}")
@@ -66,7 +66,7 @@ class InventoryUI:
     def __calculateHotbarPos(self):
         screen_width = self.__main.getConfig().getScreenWidth()
         self.x_position = (screen_width - self.__new_width) // 2
-        self.y_position = -4  # Adjust as needed
+        self.y_position = -4
         logging.debug(f"Hotbar position calculated at ({self.x_position}, {self.y_position})")
 
     def __initButtons(self):
@@ -76,29 +76,39 @@ class InventoryUI:
             scaled_pos = pos * self.__scaling_factor
             absolute_pos = Vector2(self.x_position + scaled_pos.x, self.y_position + scaled_pos.y)
 
-            def on_left_click(slot_index=idx):
+            def onLeftClick(slot_index=idx):
                 self.__callButtonEvent(slot_index)
                 self.selectSlot(slot_index)
+
+            def onHover(slot_index=idx):
+                self.__main.getUIManager().towerStatusUI.tick(self.__slotDisplays[slot_index].get("name"))
+
+            def onHoverStop(slot_index=idx):
+                self.__main.getUIManager().towerStatusUI.tick(None)
 
             button = Button(
                 x=absolute_pos.x,
                 y=absolute_pos.y,
                 w=scaled_button_size,
                 h=scaled_button_size,
-                onLeftClick=on_left_click,
+                onLeftClick=onLeftClick,
+                onHover=onHover,
+                onHoverStop=onHoverStop,
                 color=(0, 0, 0, 255),
                 hover_color=(0, 0, 0, 128),
                 selected_color=(0, 0, 0, 128),
                 alpha=255,
                 hover_alpha=128,
                 selected_alpha=128,
+                font=self.__font,
                 text="",
-                text_color=(255, 128, 0),
+                hover_text="",
+                text_color=(0, 0, 0),
                 text_valign="bottom",
             )
             self.__buttons.append(button)
         logging.info(f"Initialized {len(self.__buttons)} buttons.")
-        self.selected_slot = None  # Keep track of the selected slot
+        self.selected_slot = None
 
     def selectSlot(self, slot_index):
         # Deselect all buttons
@@ -109,7 +119,6 @@ class InventoryUI:
 
     # noinspection PyMethodMayBeStatic
     def __callButtonEvent(self, slot_index):
-        # Create and post the custom event with slot index data
         event_data = {"slot": slot_index, "tower": self.__slotDisplays[slot_index].get("name")}
         pygame.event.post(pygame.event.Event(PLAYER_INVENTORY_SELECTED, data=event_data))
 
@@ -118,10 +127,13 @@ class InventoryUI:
         screen.blit(self.__image, (self.x_position, self.y_position))
         for idx, button in enumerate(self.__buttons):
             if self.__slotDisplays[idx].get("image"):
+                text = "€"+str(self.__main.getTowerConfig().getTowerConfig(self.__slotDisplays[idx].get('name')).get('1')['cost'])
                 button.alpha = 255
                 button.image = self.__slotDisplays[idx].get("image")
                 button.color = (0, 0, 0, 255)
                 button.transparent = False
+                button.hover_text = text
+                button.text = text
             else:
                 button.alpha = 0
                 button.color = (0, 0, 0, 128)
@@ -134,8 +146,4 @@ class InventoryUI:
 
     def setSlot(self, slot: int, data: dict):
         self.__slotDisplays[slot] = data
-
-
-
-
 

@@ -5,24 +5,32 @@
     "damage": 5,
     "speed": 2,
     "range": 2.5,
-    "cost": 100
+    "cost": 100,
+    "slow_percent": 0.25,
+    "slow_duration": 5000
   },
   "2": {
     "damage": 7,
     "speed": 2,
     "range": 2.5,
-    "cost": 125
+    "cost": 125,
+    "slow_percent": 0.25,
+    "slow_duration": 5000
   },
   "3": {
     "damage": 9,
     "speed": 1.5,
     "range": 2.5,
-    "cost": 200
+    "cost": 200,
+    "slow_percent": 0.25,
+    "slow_duration": 5000
   },
   "4": {
     "damage": 15,
     "speed": 1,
     "range": 3,
-    "cost": 300
+    "cost": 300,
+    "slow_percent": 0.25,
+    "slow_duration": 5000
   }
 }

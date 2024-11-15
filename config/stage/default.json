@@ -1,6 +1,6 @@
 {
   "background": "./config/images/background.png",
-  "path": "./config/images/gold_block.png",
+  "path": "./config/images/empty.png",
   "grid_size": 64,
   "walk_path": [
     "1,10",
@@ -22,10 +22,9 @@
   ],
   "waves": {
     "1": {
-      "spawn_rate": 2.0,
+      "spawn_rate": 1.0,
       "enemies": {
-        "zombie": 5,
-        "skeleton": 2
+        "coal": 6
       }
     },
     "2": {

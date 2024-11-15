@@ -2,8 +2,10 @@ import pygame
 
 from typing import TYPE_CHECKING
 from ConfigLoader import ConfigLoader
+from src.GameMechanics.Configs.TowerConfig import TowerConfig
 from src.GameMechanics.Entities.Player import Player
 from src.GameMechanics.Configs.EnemyConfig import EnemyConfig
+from src.GameMechanics.Manager.CurrencyManager import CurrencyManager
 from src.GameMechanics.Manager.InventoryManager import InventoryManager
 from src.GameMechanics.Manager.PlacementManager import PlacementManager
 from src.GameMechanics.Manager.StageManager import StageManager
@@ -20,24 +22,17 @@ class GameScene(Scene):
         super().__init__()
         self.__main: 'Main' = main
         self.__enemyConfig = EnemyConfig(self)
+        self.__towerConfig = TowerConfig(self)
         self.__stageManager = StageManager(self, "default")
         self.__UIManager = UIManager(self)
         self.__player = Player(self)
         self.__waveManager = WaveManager(self)
         self.__placementManager = PlacementManager(self)
         self.__InventoryManager = InventoryManager(self, self.__UIManager.hotbarUI)
+        self.__currencyManager = CurrencyManager(self)
 
     def tick(self, dt: float):
         self.__stageManager.tick(dt)
-
-    def reset(self):
-        self.__enemyConfig = EnemyConfig(self)
-        self.__stageManager = StageManager(self, "default")
-        self.__UIManager = UIManager(self)
-        self.__player = Player(self)
-        self.__waveManager = WaveManager(self)
-        self.__placementManager = PlacementManager(self)
-        self.__InventoryManager = InventoryManager(self, self.__UIManager.hotbarUI)
 
     def getConfig(self) -> ConfigLoader:
         return self.__main.getConfig()
@@ -74,3 +69,9 @@ class GameScene(Scene):
 
     def getInventoryManager(self) -> InventoryManager:
         return self.__InventoryManager
+
+    def getCurrencyManager(self) -> CurrencyManager:
+        return self.__currencyManager
+
+    def getTowerConfig(self) -> TowerConfig:
+        return self.__towerConfig

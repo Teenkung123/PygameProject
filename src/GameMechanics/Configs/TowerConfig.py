@@ -3,10 +3,13 @@ import logging
 import os
 import sys
 
-from src.Scenes.GameScene import GameScene
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    from src.Scenes.GameScene import GameScene
 
 
-class TowerConfg:
+class TowerConfig:
     def __init__(self, gameScene: 'GameScene'):
         self.main = gameScene
         self.loadedConfigs = {}
@@ -18,7 +21,7 @@ class TowerConfg:
         logging.info(f"Loading Towers Config from: {towers_config_path}")
 
         if not os.path.exists(towers_config_path):
-            logging.error(f"Towers configuration file not found: {towers_config_path}")
+            logging.error(f"Towers configuration directory not found: {towers_config_path}")
             sys.exit(1)
 
         for file in os.listdir(towers_config_path):
@@ -27,16 +30,19 @@ class TowerConfg:
                     with open(os.path.join(towers_config_path, file), "r") as f:
                         tower_config = json.load(f)
                         logging.info(f"Tower configuration loaded successfully: {file}")
-                        self.loadedConfigs[file] = tower_config
+                        self.loadedConfigs[file.replace(".json", "")] = tower_config
                 except json.JSONDecodeError as e:
-                    logging.error(f"Error parsing tower configuration: {e}")
+                    logging.error(f"Error parsing tower configuration '{file}': {e}")
                     sys.exit(1)
                 except Exception as e:
-                    logging.error(f"Unexpected error loading tower configuration: {e}")
+                    logging.error(f"Unexpected error loading tower configuration '{file}': {e}")
                     sys.exit(1)
 
-    def getTowerConfig(self, towerName: str):
-        return self.loadedConfigs.get(towerName, None)
+    def getTowerConfig(self, towerName: str) -> dict:
+        return self.loadedConfigs.get(towerName)
 
-    def getTowerLevelConfig(self, towerName: str, level: int):
-        return self.loadedConfigs[towerName].get(f"{level}", None)
+    def getTowerLevelConfig(self, towerName: str, level: int) -> Any | None:
+        tower_config = self.loadedConfigs.get(towerName)
+        if tower_config:
+            return tower_config.get(str(level))
+        return None

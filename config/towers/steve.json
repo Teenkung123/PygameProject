@@ -1,0 +1,36 @@
+{
+  "max_level": 4,
+  "image": "config/images/Towers/steve/steve.png",
+  "attack_type": "AOE",
+  "attack_priority": "random",
+  "1": {
+    "damage": 20,
+    "speed": 100,
+    "range": 2,
+    "cost": 50,
+    "blast_radius": 1.5,
+    "blast_damage": 100,
+    "image": "config/images/Towers/steve/steve_level1.png"
+  },
+  "2": {
+    "damage": 30,
+    "speed": 3,
+    "range": 2.5,
+    "cost": 100,
+    "image": "config/images/Towers/steve/steve_level2.png"
+  },
+  "3": {
+    "damage": 40,
+    "speed": 2,
+    "range": 2.5,
+    "cost": 150,
+    "image": "config/images/Towers/steve/steve_level3.png"
+  },
+  "4": {
+    "damage": 40,
+    "speed": 1.175,
+    "range": 3,
+    "cost": 200,
+    "image": "config/images/Towers/steve/steve_level4.png"
+  }
+}
