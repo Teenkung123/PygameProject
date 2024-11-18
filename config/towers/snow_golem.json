@@ -1,11 +1,11 @@
 {
   "max_level": 4,
-  "image": "config/images/pumpkin_top.png",
+  "image": "config/images/Towers/snow/snow_golem.png",
   "1": {
-    "damage": 5,
+    "damage": 0,
     "speed": 2,
     "range": 2.5,
-    "cost": 100,
+    "cost": 1,
     "slow_percent": 0.25,
     "slow_duration": 5000
   },

@@ -11,7 +11,9 @@
   },
   "inventory": {
     "slots": {
-      "0": "steve"
+      "0": "steve",
+      "1": "snow_golem",
+      "2": "lava"
     }
   }
 }

@@ -71,13 +71,14 @@ class Tower(pygame.sprite.Sprite):
         self._speed = level_config.get("speed", 0)
         self._range = level_config.get("range", 0)
         self._cost = level_config.get("cost", 0)
-        self._debuffs = self._extractDebuffs(level_config)
+        self._debuffs = self._extractxDebuffs(level_config)
         # Additional attributes for specific attack types
         if self._attack_type == "AOE":
             self._blast_radius = level_config.get("blast_radius", 0)
             self._blast_damage = level_config.get("blast_damage", 0)
 
-    def _extractDebuffs(self, level_config):
+    # noinspection PyMethodMayBeStatic
+    def _extractxDebuffs(self, level_config):
         debuffs = {}
         for key in ['slow_percent', 'slow_duration', 'slow_type',
                     'bleeding_damage', 'bleeding_duration', 'bleeding_type',
@@ -121,11 +122,18 @@ class Tower(pygame.sprite.Sprite):
 
     def attack(self):
         enemies_in_range = self._getEnemiesInRange()
-        target_enemy = self._selectTarget(enemies_in_range)
+        if not enemies_in_range:
+            return
 
-        if target_enemy:
-            self._applyEffect(target_enemy)
+        if self._attack_type == 'around':
+            for enemy in enemies_in_range:
+                self._applyEffect(enemy)
             self._cooldown = self._speed
+        else:
+            target_enemy = self._selectTarget(enemies_in_range)
+            if target_enemy:
+                self._applyEffect(target_enemy)
+                self._cooldown = self._speed
 
     def _getEnemiesInRange(self):
         enemies_in_range = []
@@ -151,6 +159,8 @@ class Tower(pygame.sprite.Sprite):
             enemies.sort(key=lambda e: -e.getHealth())
         elif self._attack_priority == "random":
             random.shuffle(enemies)
+        else:
+            enemies.sort(key=lambda e: e.getProgress())
 
         return enemies[0]  # Return the first enemy after sorting
 
@@ -179,16 +189,15 @@ class Tower(pygame.sprite.Sprite):
                 self._applyDebuffs(enemy)
 
     def _applyDebuffs(self, enemy: "Enemy"):
-        # Apply debuffs if specified
         if 'slow_percent' in self._debuffs and 'slow_duration' in self._debuffs:
-            key = f"slow_{self._towerName}_{self._level}"
+            key = f"slow_{self._towerName}"
             enemy.setSpeedMultiplier(key, self._debuffs['slow_percent'], self._debuffs['slow_duration'])
         if 'bleeding_damage' in self._debuffs and 'bleeding_duration' in self._debuffs:
-            enemy.applyBleeding(self._debuffs['bleeding_damage'], self._debuffs['bleeding_duration'])
+            enemy.applyBleeding(self._debuffs['bleeding_damage'], self._debuffs['bleeding_duration'], self._towerName)
         if 'burning_damage' in self._debuffs and 'burning_duration' in self._debuffs:
-            enemy.applyBurning(self._debuffs['burning_damage'], self._debuffs['burning_duration'])
+            enemy.applyBurning(self._debuffs['burning_damage'], self._debuffs['burning_duration'], self._towerName)
         if 'add_gold_amount' in self._debuffs:
-            self._gameScene.getPlayer().addGold(self._debuffs['add_gold_amount'])
+            self._gameScene.getCurrencyManager().deposit("gold", self._debuffs['add_gold_amount'])
 
     def _loadImage(self):
         # Get the image path for the current level

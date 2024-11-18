@@ -27,13 +27,16 @@ class InventoryManager:
                 logging.error(f"InventoryManager tower not found: {tower_path}")
                 raise FileNotFoundError(f"InventoryManager tower not found: {tower_path}")
             with open(tower_path) as f:
-                data = json.load(f)
-                ipath = os.path.join(self.__gameScene.getProjectRoot(), data['image'])
-                image_path = os.path.normpath(ipath)
-                img = pygame.image.load(image_path)
-                img = pygame.transform.scale(img, (self.__gameScene.getStageManager().getStageConfig().getGridSize() * 0.8, self.__gameScene.getStageManager().getStageConfig().getGridSize() * 0.8))
+                try:
+                    data = json.load(f)
+                    ipath = os.path.join(self.__gameScene.getProjectRoot(), data['image'])
+                    image_path = os.path.normpath(ipath)
+                    img = pygame.image.load(image_path)
+                    img = pygame.transform.scale(img, (self.__gameScene.getStageManager().getStageConfig().getGridSize() * 0.8, self.__gameScene.getStageManager().getStageConfig().getGridSize() * 0.8))
 
-                self.__inventoryUI.setSlot(slot, {"image": img, "name": self.__config['slots'][item]})
+                    self.__inventoryUI.setSlot(slot, {"image": img, "name": self.__config['slots'][item]})
+                except Exception as e:
+                    logging.error(f"Error inserting item into inventory: {e}")
 
     def setSelectedTower(self, towerName: str):
         self.__selectedTower = towerName

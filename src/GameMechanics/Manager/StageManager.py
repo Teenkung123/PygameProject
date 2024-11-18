@@ -20,8 +20,10 @@ class StageManager:
         self.__stageConfig = StageConfig(gameScene.getProjectRoot(), stage)
         self.__background = BackgroundElement(self.__stageConfig, gameScene.getConfig(), gameScene.getScreen())
         self.__path = PathElement(self.__stageConfig, gameScene, gameScene.getScreen())
-        self.__timeScale = 1.0 #Time Scale, Use in events like time slow or speed up some element of the game, like time stop skill
+        self.timeScale = 1.0 #Time Scale, Use in events like time slow or speed up some element of the game, like time stop skill
         self.__isPaused = False
+        self.isVictory = False
+        self.isLost = False
 
 
     def getStageConfig(self):
@@ -42,14 +44,8 @@ class StageManager:
         """
         return self.__path
 
-    def getTimeScale(self):
-        """
-        Return the timescale.
-        """
-        return self.__timeScale
-
     def tick(self, deltaTime: float):
-        if self.__main.getUIManager().pauseUI.getPauseTimeMultiplier() > 0:
+        if self.__main.getUIManager().pauseUI.getPauseTimeMultiplier() > 0 and not self.isVictory and not self.isLost:
             self.__main.getWaveManager().update(deltaTime)
             self.__main.getPlacementManager().tick(deltaTime)
             self.__main.getUIManager().currencyUI.tick(deltaTime)
@@ -67,6 +63,13 @@ class StageManager:
 
         if self.__main.getUIManager().pauseUI.getPauseTimeMultiplier() > 0:
             self.__main.getUIManager().towerStatusUI.draw()
+            self.__main.getUIManager().waveChangeUI.tick(deltaTime)
+
+        if self.isVictory:
+            self.__main.getUIManager().playerVictoryUI.tick(deltaTime)
+
+        if self.isLost:
+            self.__main.getUIManager().playerLostUI.tick(deltaTime)
 
         self.__main.getUIManager().pauseUI.tick(deltaTime)
     # noinspection PyMethodMayBeStatic

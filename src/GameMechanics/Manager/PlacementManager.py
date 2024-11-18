@@ -21,13 +21,13 @@ class PlacementManager:
         if position[1] == 0:
             return False
 
-        if Vector2(*position) in self.__gameScene.getStageManager().getPath().getFullPathCoordinates():
-            logging.info("Cannot place tower on path.")
-            return False
-
         tower = self.__createTower(towerType)
         if tower is None:
             logging.error(f"Invalid tower type: {towerType}, please check tower configurations.")
+            return False
+
+        if Vector2(*position) in self.__gameScene.getStageManager().getPath().getFullPathCoordinates():
+            logging.info("Cannot place tower on path.")
             return False
 
         cost: int = self.__gameScene.getTowerConfig().getTowerLevelConfig(towerType, 1).get("cost")

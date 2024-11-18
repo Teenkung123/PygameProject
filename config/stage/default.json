@@ -18,27 +18,203 @@
     "13,9",
     "13,2",
     "14,2"
-
   ],
   "waves": {
     "1": {
-      "spawn_rate": 1.0,
+      "spawn_rate": 5,
       "enemies": {
-        "coal": 6
+        "copper": 2
       }
     },
     "2": {
-      "spawn_rate": 1.5,
+      "spawn_rate": 4.5,
       "enemies": {
-        "zombie": 10,
-        "skeleton": 5
+        "copper": 15
       }
     },
     "3": {
+      "spawn_rate": 4,
+      "enemies": {
+        "copper": 10,
+        "coal": 5
+      }
+    },
+    "4": {
+      "spawn_rate": 3.5,
+      "enemies": {
+        "coal": 15
+      }
+    },
+    "5": {
+      "spawn_rate": 3,
+      "enemies": {
+        "coal": 10,
+        "iron": 5
+      }
+    },
+    "6": {
+      "spawn_rate": 5,
+      "enemies": {
+        "boss_iron": 1
+      }
+    },
+    "7": {
+      "spawn_rate": 2.8,
+      "enemies": {
+        "iron": 15
+      }
+    },
+    "8": {
+      "spawn_rate": 2.5,
+      "enemies": {
+        "iron": 10,
+        "lapis": 5
+      }
+    },
+    "9": {
+      "spawn_rate": 2.2,
+      "enemies": {
+        "lapis": 15
+      }
+    },
+    "10": {
+      "spawn_rate": 2,
+      "enemies": {
+        "lapis": 10,
+        "gold": 5
+      }
+    },
+    "11": {
+      "spawn_rate": 1.8,
+      "enemies": {
+        "gold": 15
+      }
+    },
+    "12": {
+      "spawn_rate": 5,
+      "enemies": {
+        "boss_gold": 1
+      }
+    },
+    "13": {
+      "spawn_rate": 1.6,
+      "enemies": {
+        "gold": 10,
+        "redstone": 5
+      }
+    },
+    "14": {
+      "spawn_rate": 1.4,
+      "enemies": {
+        "redstone": 15
+      }
+    },
+    "15": {
+      "spawn_rate": 1.2,
+      "enemies": {
+        "redstone": 10,
+        "diamond": 5
+      }
+    },
+    "16": {
       "spawn_rate": 1.0,
       "enemies": {
-        "zombie": 15,
-        "skeleton": 10
+        "diamond": 15
+      }
+    },
+    "17": {
+      "spawn_rate": 0.9,
+      "enemies": {
+        "diamond": 10,
+        "emerald": 5
+      }
+    },
+    "18": {
+      "spawn_rate": 5,
+      "enemies": {
+        "boss_diamond": 1
+      }
+    },
+    "19": {
+      "spawn_rate": 0.8,
+      "enemies": {
+        "emerald": 15
+      }
+    },
+    "20": {
+      "spawn_rate": 0.7,
+      "enemies": {
+        "emerald": 10,
+        "netherite": 5
+      }
+    },
+    "21": {
+      "spawn_rate": 0.6,
+      "enemies": {
+        "netherite": 15
+      }
+    },
+    "22": {
+      "spawn_rate": 0.5,
+      "enemies": {
+        "netherite": 10,
+        "diamond": 5
+      }
+    },
+    "23": {
+      "spawn_rate": 0.4,
+      "enemies": {
+        "netherite": 20
+      }
+    },
+    "24": {
+      "spawn_rate": 5,
+      "enemies": {
+        "boss_emerald": 1
+      }
+    },
+    "25": {
+      "spawn_rate": 0.3,
+      "enemies": {
+        "netherite": 15,
+        "diamond": 10,
+        "emerald": 5
+      }
+    },
+    "26": {
+      "spawn_rate": 0.2,
+      "enemies": {
+        "netherite": 15,
+        "emerald": 10
+      }
+    },
+    "27": {
+      "spawn_rate": 0.1,
+      "enemies": {
+        "netherite": 20,
+        "emerald": 10
+      }
+    },
+    "28": {
+      "spawn_rate": 0.1,
+      "enemies": {
+        "netherite": 20,
+        "emerald": 10,
+        "gold": 5
+      }
+    },
+    "29": {
+      "spawn_rate": 0.1,
+      "enemies": {
+        "netherite": 25,
+        "emerald": 10,
+        "diamond": 5
+      }
+    },
+    "30": {
+      "spawn_rate": 5,
+      "enemies": {
+        "boss_netherite": 1
       }
     }
   }
