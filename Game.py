@@ -19,6 +19,8 @@ class Main:
         self.__config = ConfigLoader(os.path.join(self.__projectRoot, "config", "config.json"))
         self.__eventHandler = EventHandler(self)
         self.__screen = None
+        #self.__screen_width = self.__config.getScreenWidth()
+        #self.__screen_height = self.__config.getScreenHeight()
         self.__gradientUtils = GradientUtils()
         self.__initScreen__()
         self.__fontCache = {}
