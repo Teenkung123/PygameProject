@@ -29,8 +29,8 @@ class Enemy(pygame.sprite.Sprite):
         self.__reward = 10
         self.image = None
         self.__loadEnemy()
-        self.__effects = {'bleeding': [], 'burning': []}
         self.__total_path_length = self.__calculate_total_path_length()
+        self.__effects = []
 
     def __loadEnemy(self):
         if not self.__config:
@@ -126,27 +126,53 @@ class Enemy(pygame.sprite.Sprite):
             del self.__speedMultipliers[key]
 
     def __updateEffects(self, deltaTime: float):
-        # Update bleeding effects
-        expired_bleeding = []
-        for effect in self.__effects['bleeding']:
-            effect['duration'] -= deltaTime * 1000
+        expired_effects = []
+        for effect in self.__effects:
+            effect['duration'] -= deltaTime * 1000  # Convert deltaTime to milliseconds
+            effect['time_since_last_application'] += deltaTime
             if effect['duration'] <= 0:
-                expired_bleeding.append(effect)
-            else:
-                self.decreaseHealth(effect['damage'] * deltaTime)
-        for effect in expired_bleeding:
-            self.__effects['bleeding'].remove(effect)
+                expired_effects.append(effect)
+                continue
+            while effect['time_since_last_application'] >= 0.5:
+                self.decreaseHealth(effect['damage'])
+                effect['time_since_last_application'] -= 0.5
+        for effect in expired_effects:
+            self.__effects.remove(effect)
 
-        # Update burning effects
-        expired_burning = []
-        for effect in self.__effects['burning']:
-            effect['duration'] -= deltaTime * 1000
-            if effect['duration'] <= 0:
-                expired_burning.append(effect)
-            else:
-                self.decreaseHealth(effect['damage'] * deltaTime)
-        for effect in expired_burning:
-            self.__effects['burning'].remove(effect)
+    def applyBleeding(self, damage, duration, tower_type):
+        existing_effect = next((e for e in self.__effects if e['type'] == 'bleeding' and e['tower_type'] == tower_type), None)
+        if existing_effect:
+            existing_effect['duration'] = duration
+        else:
+            self.__effects.append({
+                'type': 'bleeding',
+                'tower_type': tower_type,
+                'damage': damage,
+                'duration': duration,
+                'time_since_last_application': 0.0
+            })
+
+    def applyBurning(self, damage, duration, tower_type):
+        existing_effect = next((e for e in self.__effects if e['type'] == 'burning' and e['tower_type'] == tower_type), None)
+        if existing_effect:
+            existing_effect['duration'] = duration
+        else:
+            self.__effects.append({
+                'type': 'burning',
+                'tower_type': tower_type,
+                'damage': damage,
+                'duration': duration,
+                'time_since_last_application': 0.0
+            })
+
+    def setSpeedMultiplier(self, key: str, multiplier: float, duration_ms: float):
+        if multiplier < 0 or multiplier > 1:
+            raise ValueError("Multiplier should be between 0 and 1.")
+        # If the key already exists, reset the duration
+        if key in self.__speedMultipliers:
+            self.__speedMultipliers[key]['duration'] = duration_ms
+        else:
+            self.__speedMultipliers[key] = {'multiplier': multiplier, 'duration': duration_ms}
 
     def draw(self):
         try:
@@ -158,12 +184,6 @@ class Enemy(pygame.sprite.Sprite):
     def isSlowed(self):
         total_speed_multiplier = sum([effect['multiplier'] for effect in self.__speedMultipliers.values()])
         return total_speed_multiplier > 0
-
-    def setSpeedMultiplier(self, key: str, multiplier: float, duration_ms: float):
-        # multiplier should be between 0 and 1, representing the percentage reduction in speed
-        if multiplier < 0 or multiplier > 1:
-            raise ValueError("Multiplier should be between 0 and 1.")
-        self.__speedMultipliers[key] = {'multiplier': multiplier, 'duration': duration_ms}
 
     def getTotalSpeedMultiplier(self):
         return sum([effect['multiplier'] for effect in self.__speedMultipliers.values()])
@@ -221,12 +241,6 @@ class Enemy(pygame.sprite.Sprite):
 
     def getReward(self):
         return self.__reward
-
-    def applyBleeding(self, damage, duration):
-        self.__effects['bleeding'].append({'damage': damage, 'duration': duration})
-
-    def applyBurning(self, damage, duration):
-        self.__effects['burning'].append({'damage': damage, 'duration': duration})
 
     def __calculate_total_path_length(self):
         # Calculate the total length of the path for progress calculation

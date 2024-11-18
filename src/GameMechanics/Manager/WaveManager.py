@@ -4,7 +4,7 @@ import logging
 from typing import TYPE_CHECKING
 
 from src.GameMechanics.Entities.Enemy import Enemy
-from src.Events import PLAYER_VICTORY
+from src.Events import PLAYER_VICTORY, STAGE_WAVE_END
 
 if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene
@@ -20,10 +20,7 @@ class WaveManager:
         self.__enemies = []           # List of enemies to spawn
 
         self.__currentWave = 0        # Current wave number
-        self.__waiting = False        # Waiting for next wave
         self.__delay = 0.0            # Time since wave completed
-
-        self.__victory = False        # Is Victory
 
         self.__spawnedEnemy = pygame.sprite.Group()  # Group of spawned enemies
 
@@ -57,10 +54,10 @@ class WaveManager:
             pygame.event.post(pygame.event.Event(PLAYER_VICTORY))
 
     def update(self, deltaTime: float):
-        self.__checkWaiting(deltaTime)
-        self.__spawnRandomEnemy(deltaTime)
-        self.__checkWaveCompleted()
-        self.__updateEnemies(deltaTime)
+        if self.__main.getUIManager().waveChangeUI.canStart:
+            self.__spawnRandomEnemy(deltaTime)
+            self.__checkWaveCompleted()
+            self.__updateEnemies(deltaTime)
 
     def draw(self):
         try:
@@ -70,23 +67,6 @@ class WaveManager:
 
     def getEnemies(self) -> pygame.sprite.Group:
         return self.__spawnedEnemy
-
-    def __checkWaiting(self, deltaTime: float):
-        if self.__victory:
-            return
-        if self.__waiting:
-            self.__delay += deltaTime
-            wave_delay = self.__main.getConfig().getGameSettings("wave_delay")
-            if wave_delay is None:
-                wave_delay = 3.0  # Default to 3 seconds if not set
-            if self.__delay >= wave_delay:
-                self.__waiting = False
-                self.__delay = 0.0
-                self.startNextWave()
-            return
-
-        if self.__currentWave == 0:
-            self.startNextWave()
 
     def __spawnRandomEnemy(self, deltaTime: float):
         if self.__enemies:
@@ -118,8 +98,12 @@ class WaveManager:
             self.completeWave()
 
     def completeWave(self):
-        self.__waiting = True
-        self.__spawnTimer = 0.0
+        if str(self.__currentWave + 1) in self.__waveConfig:
+            self.__spawnTimer = 0.0
+            pygame.event.post(pygame.event.Event(STAGE_WAVE_END, wave=self.__currentWave))
+        else:
+            logging.info("All waves completed. Victory!")
+            pygame.event.post(pygame.event.Event(PLAYER_VICTORY))
 
     def __updateEnemies(self, deltaTime: float):
         try:
