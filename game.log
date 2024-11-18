@@ -1,0 +1,899 @@
+2024-11-18 07:51:41,634 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 07:51:41,958 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 07:51:41,960 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 07:51:41,963 - INFO - Enemies configuration loaded successfully.
+2024-11-18 07:51:41,965 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 07:51:41,967 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 07:51:41,970 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 07:51:41,971 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 07:51:41,972 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 07:51:41,974 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 07:51:41,975 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 07:51:41,990 - INFO - Background image loaded and scaled.
+2024-11-18 07:51:41,994 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 07:51:41,997 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 07:51:41,999 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 07:51:42,001 - INFO - Path surface created and path drawn successfully.
+2024-11-18 07:51:42,007 - INFO - Initialized 9 buttons.
+2024-11-18 07:51:42,021 - INFO - WaveManager initialized.
+2024-11-18 07:51:46,501 - INFO - Wave 1 started with 6 enemies.
+2024-11-18 07:51:47,514 - INFO - Spawned enemy: Coal
+2024-11-18 07:51:48,531 - INFO - Spawned enemy: Coal
+2024-11-18 07:51:49,536 - INFO - Spawned enemy: Coal
+2024-11-18 07:51:50,609 - INFO - Spawned enemy: Coal
+2024-11-18 07:51:51,130 - INFO - Slot 1 selected
+2024-11-18 07:51:51,620 - INFO - Spawned enemy: Coal
+2024-11-18 07:51:52,635 - INFO - Spawned enemy: Coal
+2024-11-18 07:51:53,383 - INFO - Slot 1 selected
+2024-11-18 07:51:54,229 - INFO - Placed tower 'steve' at [160, 288]
+2024-11-18 07:52:02,943 - INFO - Cannot place tower on path.
+2024-11-18 07:52:05,442 - INFO - Slot 1 selected
+2024-11-18 07:52:09,409 - INFO - Cannot place tower on path.
+2024-11-18 07:52:09,762 - INFO - Cannot place tower on path.
+2024-11-18 07:52:09,944 - INFO - Cannot place tower on path.
+2024-11-18 07:52:11,550 - INFO - Slot 1 selected
+2024-11-18 07:52:19,183 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 07:52:19,279 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 07:52:19,281 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 07:52:19,283 - INFO - Enemies configuration loaded successfully.
+2024-11-18 07:52:19,284 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 07:52:19,286 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 07:52:19,288 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 07:52:19,288 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 07:52:19,290 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 07:52:19,293 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 07:52:19,294 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 07:52:19,313 - INFO - Background image loaded and scaled.
+2024-11-18 07:52:19,316 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 07:52:19,318 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 07:52:19,321 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 07:52:19,323 - INFO - Path surface created and path drawn successfully.
+2024-11-18 07:52:19,327 - INFO - Initialized 9 buttons.
+2024-11-18 07:52:19,335 - INFO - WaveManager initialized.
+2024-11-18 07:52:20,492 - INFO - Wave 1 started with 6 enemies.
+2024-11-18 07:52:21,494 - INFO - Spawned enemy: Coal
+2024-11-18 07:52:21,981 - INFO - Slot 1 selected
+2024-11-18 07:52:22,499 - INFO - Spawned enemy: Coal
+2024-11-18 07:52:23,504 - INFO - Spawned enemy: Coal
+2024-11-18 07:52:23,808 - INFO - Placed tower 'steve' at [160, 224]
+2024-11-18 07:52:24,503 - INFO - Spawned enemy: Coal
+2024-11-18 07:52:25,505 - INFO - Spawned enemy: Coal
+2024-11-18 07:52:26,518 - INFO - Spawned enemy: Coal
+2024-11-18 07:52:43,947 - INFO - Cannot place tower on path.
+2024-11-18 07:52:45,173 - INFO - Cannot place tower on path.
+2024-11-18 07:52:48,914 - INFO - Slot 1 selected
+2024-11-18 08:14:59,157 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 08:14:59,525 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 08:14:59,527 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 08:14:59,530 - INFO - Enemies configuration loaded successfully.
+2024-11-18 08:14:59,531 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 08:14:59,534 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 08:14:59,536 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 08:14:59,537 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 08:14:59,539 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 08:14:59,540 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 08:14:59,541 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 08:14:59,558 - INFO - Background image loaded and scaled.
+2024-11-18 08:14:59,560 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 08:14:59,562 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 08:14:59,564 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 08:14:59,567 - INFO - Path surface created and path drawn successfully.
+2024-11-18 08:14:59,572 - INFO - Initialized 9 buttons.
+2024-11-18 08:14:59,580 - INFO - WaveManager initialized.
+2024-11-18 08:15:04,501 - INFO - Wave 1 started with 6 enemies.
+2024-11-18 08:15:05,494 - INFO - Spawned enemy: Coal
+2024-11-18 08:15:43,377 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 08:15:43,683 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 08:15:43,685 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 08:15:43,687 - INFO - Enemies configuration loaded successfully.
+2024-11-18 08:15:43,689 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 08:15:43,692 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 08:15:43,695 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 08:15:43,697 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 08:15:43,698 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 08:15:43,700 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 08:15:43,703 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 08:15:43,724 - INFO - Background image loaded and scaled.
+2024-11-18 08:15:43,727 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 08:15:43,730 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 08:15:43,732 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 08:15:43,734 - INFO - Path surface created and path drawn successfully.
+2024-11-18 08:15:43,740 - INFO - Initialized 9 buttons.
+2024-11-18 08:15:43,750 - INFO - WaveManager initialized.
+2024-11-18 08:34:52,667 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 08:34:52,988 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 08:34:52,989 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 08:34:52,991 - INFO - Enemies configuration loaded successfully.
+2024-11-18 08:34:52,994 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 08:34:52,995 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 08:34:52,997 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 08:34:52,997 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 08:34:52,998 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 08:34:52,998 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 08:34:53,001 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 08:34:53,014 - INFO - Background image loaded and scaled.
+2024-11-18 08:34:53,017 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 08:34:53,019 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 08:34:53,021 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 08:34:53,022 - INFO - Path surface created and path drawn successfully.
+2024-11-18 08:34:53,027 - INFO - Initialized 9 buttons.
+2024-11-18 08:34:53,038 - INFO - WaveManager initialized.
+2024-11-18 08:37:31,336 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 08:37:31,401 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 08:37:31,402 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 08:37:31,404 - INFO - Enemies configuration loaded successfully.
+2024-11-18 08:37:31,406 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 08:37:31,408 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 08:37:31,410 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 08:37:31,411 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 08:37:31,412 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 08:37:31,414 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 08:37:31,415 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 08:37:31,432 - INFO - Background image loaded and scaled.
+2024-11-18 08:37:31,435 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 08:37:31,437 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 08:37:31,439 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 08:37:31,440 - INFO - Path surface created and path drawn successfully.
+2024-11-18 08:37:31,444 - INFO - Initialized 9 buttons.
+2024-11-18 08:37:31,455 - INFO - WaveManager initialized.
+2024-11-18 08:37:38,204 - INFO - Wave 1 started with 6 enemies.
+2024-11-18 08:37:39,195 - INFO - Spawned enemy: Coal
+2024-11-18 08:37:40,195 - INFO - Spawned enemy: Coal
+2024-11-18 08:37:40,916 - INFO - Slot 1 selected
+2024-11-18 08:37:41,208 - INFO - Spawned enemy: Coal
+2024-11-18 08:37:42,220 - INFO - Spawned enemy: Coal
+2024-11-18 08:37:43,253 - INFO - Spawned enemy: Coal
+2024-11-18 08:37:43,904 - INFO - Placed tower 'steve' at [160, 224]
+2024-11-18 08:37:44,250 - INFO - Spawned enemy: Coal
+2024-11-18 08:37:55,713 - INFO - Slot 1 selected
+2024-11-18 10:10:44,639 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 10:10:44,804 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 10:10:44,805 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 10:10:44,809 - INFO - Enemies configuration loaded successfully.
+2024-11-18 10:10:44,811 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 10:10:44,813 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 10:10:44,818 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 10:10:44,819 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 10:10:44,821 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 10:10:44,824 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 10:10:44,826 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 10:10:44,886 - INFO - Background image loaded and scaled.
+2024-11-18 10:10:44,889 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 10:10:44,891 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 10:10:44,897 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 10:10:44,899 - INFO - Path surface created and path drawn successfully.
+2024-11-18 10:10:44,910 - INFO - Initialized 9 buttons.
+2024-11-18 10:10:44,933 - INFO - WaveManager initialized.
+2024-11-18 10:11:35,337 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 10:11:35,376 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 10:11:35,379 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 10:11:35,390 - INFO - Enemies configuration loaded successfully.
+2024-11-18 10:11:35,395 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 10:11:35,401 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 10:11:35,405 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 10:11:35,406 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 10:11:35,408 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 10:11:35,415 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 10:11:35,420 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 10:11:35,468 - INFO - Background image loaded and scaled.
+2024-11-18 10:11:35,473 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 10:11:35,477 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 10:11:35,479 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 10:11:35,488 - INFO - Path surface created and path drawn successfully.
+2024-11-18 10:11:35,492 - INFO - Initialized 9 buttons.
+2024-11-18 10:11:35,508 - INFO - WaveManager initialized.
+2024-11-18 10:25:31,814 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 10:25:31,827 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 10:25:31,828 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 10:25:31,831 - INFO - Enemies configuration loaded successfully.
+2024-11-18 10:25:31,833 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 10:25:31,836 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 10:25:31,837 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 10:25:31,839 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 10:25:31,839 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 10:25:31,841 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 10:25:31,842 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 10:25:31,860 - INFO - Background image loaded and scaled.
+2024-11-18 10:25:31,865 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 10:25:31,867 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 10:25:31,869 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 10:25:31,871 - INFO - Path surface created and path drawn successfully.
+2024-11-18 10:25:31,875 - INFO - Initialized 9 buttons.
+2024-11-18 10:25:31,888 - INFO - WaveManager initialized.
+2024-11-18 10:26:29,911 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 10:26:29,918 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 10:26:29,920 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 10:26:29,922 - INFO - Enemies configuration loaded successfully.
+2024-11-18 10:26:29,924 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 10:26:29,926 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 10:26:29,928 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 10:26:29,930 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 10:26:29,931 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 10:26:29,933 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 10:26:29,934 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 10:26:29,953 - INFO - Background image loaded and scaled.
+2024-11-18 10:26:29,956 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 10:26:29,957 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 10:26:29,959 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 10:26:29,962 - INFO - Path surface created and path drawn successfully.
+2024-11-18 10:26:29,965 - INFO - Initialized 9 buttons.
+2024-11-18 10:26:29,974 - INFO - WaveManager initialized.
+2024-11-18 10:29:58,781 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 10:29:58,793 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 10:29:58,795 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 10:29:58,799 - INFO - Enemies configuration loaded successfully.
+2024-11-18 10:29:58,801 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 10:29:58,804 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 10:29:58,807 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 10:29:58,810 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 10:29:58,811 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 10:29:58,812 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 10:29:58,814 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 10:29:58,832 - INFO - Background image loaded and scaled.
+2024-11-18 10:29:58,834 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 10:29:58,836 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 10:29:58,838 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 10:29:58,843 - INFO - Path surface created and path drawn successfully.
+2024-11-18 10:29:58,847 - INFO - Initialized 9 buttons.
+2024-11-18 10:29:58,859 - INFO - WaveManager initialized.
+2024-11-18 10:32:03,437 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 10:32:03,450 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 10:32:03,453 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 10:32:03,457 - INFO - Enemies configuration loaded successfully.
+2024-11-18 10:32:03,458 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 10:32:03,461 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 10:32:03,464 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 10:32:03,467 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 10:32:03,470 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 10:32:03,473 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 10:32:03,474 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 10:32:03,505 - INFO - Background image loaded and scaled.
+2024-11-18 10:32:03,512 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 10:32:03,518 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 10:32:03,521 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 10:32:03,523 - INFO - Path surface created and path drawn successfully.
+2024-11-18 10:32:03,527 - INFO - Initialized 9 buttons.
+2024-11-18 10:32:03,541 - INFO - WaveManager initialized.
+2024-11-18 10:32:49,261 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 10:32:49,288 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 10:32:49,293 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 10:32:49,300 - INFO - Enemies configuration loaded successfully.
+2024-11-18 10:32:49,307 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 10:32:49,316 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 10:32:49,324 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 10:32:49,330 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 10:32:49,334 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 10:32:49,339 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 10:32:49,346 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 10:32:49,427 - INFO - Background image loaded and scaled.
+2024-11-18 10:32:49,435 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 10:32:49,440 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 10:32:49,444 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 10:32:49,447 - INFO - Path surface created and path drawn successfully.
+2024-11-18 10:32:49,453 - INFO - Initialized 9 buttons.
+2024-11-18 10:32:49,467 - INFO - WaveManager initialized.
+2024-11-18 10:33:33,585 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 10:33:33,591 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 10:33:33,594 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 10:33:33,596 - INFO - Enemies configuration loaded successfully.
+2024-11-18 10:33:33,597 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 10:33:33,599 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 10:33:33,601 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 10:33:33,604 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 10:33:33,605 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 10:33:33,607 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 10:33:33,609 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 10:33:33,625 - INFO - Background image loaded and scaled.
+2024-11-18 10:33:33,628 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 10:33:33,630 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 10:33:33,632 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 10:33:33,635 - INFO - Path surface created and path drawn successfully.
+2024-11-18 10:33:33,638 - INFO - Initialized 9 buttons.
+2024-11-18 10:33:33,649 - INFO - WaveManager initialized.
+2024-11-18 11:03:39,926 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:03:40,527 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:03:40,536 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:03:40,544 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:03:40,551 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:03:40,557 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:03:40,564 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:03:40,568 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:03:40,574 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:03:40,577 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:03:40,581 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:03:40,618 - INFO - Background image loaded and scaled.
+2024-11-18 11:03:40,630 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:03:40,634 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:03:40,636 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:03:40,639 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:03:40,653 - INFO - Initialized 9 buttons.
+2024-11-18 11:03:40,679 - INFO - WaveManager initialized.
+2024-11-18 11:04:04,031 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:04:04,108 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:04:04,110 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:04:04,112 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:04:04,113 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:04:04,116 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:04:04,117 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:04:04,118 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:04:04,119 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:04:04,122 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:04:04,123 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:04:04,141 - INFO - Background image loaded and scaled.
+2024-11-18 11:04:04,145 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:04:04,147 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:04:04,148 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:04:04,151 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:04:04,156 - INFO - Initialized 9 buttons.
+2024-11-18 11:04:04,169 - INFO - WaveManager initialized.
+2024-11-18 11:04:21,811 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:04:21,919 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:04:21,920 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:04:21,923 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:04:21,924 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:04:21,925 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:04:21,928 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:04:21,929 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:04:21,932 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:04:21,934 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:04:21,936 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:04:21,954 - INFO - Background image loaded and scaled.
+2024-11-18 11:04:21,957 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:04:21,959 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:04:21,960 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:04:21,964 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:04:21,968 - INFO - Initialized 9 buttons.
+2024-11-18 11:04:21,980 - INFO - WaveManager initialized.
+2024-11-18 11:05:36,154 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:05:36,268 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:05:36,270 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:05:36,273 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:05:36,275 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:05:36,278 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:05:36,280 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:05:36,281 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:05:36,282 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:05:36,284 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:05:36,286 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:05:36,309 - INFO - Background image loaded and scaled.
+2024-11-18 11:05:36,312 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:05:36,314 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:05:36,315 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:05:36,317 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:05:36,323 - INFO - Initialized 9 buttons.
+2024-11-18 11:05:36,333 - INFO - WaveManager initialized.
+2024-11-18 11:06:48,383 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:06:48,579 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:06:48,580 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:06:48,582 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:06:48,583 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:06:48,585 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:06:48,587 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:06:48,589 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:06:48,590 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:06:48,593 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:06:48,594 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:06:48,613 - INFO - Background image loaded and scaled.
+2024-11-18 11:06:48,616 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:06:48,617 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:06:48,619 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:06:48,622 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:06:48,626 - INFO - Initialized 9 buttons.
+2024-11-18 11:06:48,637 - INFO - WaveManager initialized.
+2024-11-18 11:19:56,152 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:19:56,234 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:19:56,236 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:19:56,238 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:19:56,240 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:19:56,243 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:19:56,244 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:19:56,246 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:19:56,246 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:19:56,248 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:19:56,251 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:19:56,270 - INFO - Background image loaded and scaled.
+2024-11-18 11:19:56,273 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:19:56,276 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:19:56,278 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:19:56,280 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:19:56,284 - INFO - Initialized 9 buttons.
+2024-11-18 11:19:56,298 - INFO - WaveManager initialized.
+2024-11-18 11:20:35,359 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:20:35,368 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:20:35,371 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:20:35,373 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:20:35,374 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:20:35,376 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:20:35,378 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:20:35,379 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:20:35,381 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:20:35,383 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:20:35,384 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:20:35,403 - INFO - Background image loaded and scaled.
+2024-11-18 11:20:35,407 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:20:35,409 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:20:35,411 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:20:35,414 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:20:35,418 - INFO - Initialized 9 buttons.
+2024-11-18 11:20:35,431 - INFO - WaveManager initialized.
+2024-11-18 11:23:54,349 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:23:55,190 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:23:55,194 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:23:55,202 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:23:55,211 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:23:55,220 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:23:55,226 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:23:55,231 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:23:55,233 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:23:55,242 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:23:55,247 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:23:55,295 - INFO - Background image loaded and scaled.
+2024-11-18 11:23:55,300 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:23:55,303 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:23:55,306 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:23:55,310 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:23:55,316 - INFO - Initialized 9 buttons.
+2024-11-18 11:23:55,332 - INFO - WaveManager initialized.
+2024-11-18 11:32:16,066 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:32:16,204 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:32:16,206 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:32:16,207 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:32:16,209 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:32:16,211 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:32:16,214 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:32:16,216 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:32:16,218 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:32:16,220 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:32:16,221 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:32:16,238 - INFO - Background image loaded and scaled.
+2024-11-18 11:32:16,241 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:32:16,245 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:32:16,246 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:32:16,249 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:32:16,253 - INFO - Initialized 9 buttons.
+2024-11-18 11:32:16,267 - INFO - WaveManager initialized.
+2024-11-18 11:32:51,736 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:32:51,767 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:32:51,771 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:32:51,777 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:32:51,783 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:32:51,791 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:32:51,798 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:32:51,802 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:32:51,806 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:32:51,810 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:32:51,812 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:32:51,844 - INFO - Background image loaded and scaled.
+2024-11-18 11:32:51,849 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:32:51,853 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:32:51,856 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:32:51,859 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:32:51,864 - INFO - Initialized 9 buttons.
+2024-11-18 11:32:51,876 - INFO - WaveManager initialized.
+2024-11-18 11:33:21,200 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:33:21,219 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:33:21,220 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:33:21,222 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:33:21,223 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:33:21,224 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:33:21,226 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:33:21,228 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:33:21,230 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:33:21,232 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:33:21,233 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:33:21,251 - INFO - Background image loaded and scaled.
+2024-11-18 11:33:21,254 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:33:21,256 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:33:21,257 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:33:21,260 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:33:21,265 - INFO - Initialized 9 buttons.
+2024-11-18 11:33:21,276 - INFO - WaveManager initialized.
+2024-11-18 11:33:51,900 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:33:51,977 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:33:51,978 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:33:51,980 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:33:51,981 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:33:51,984 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:33:51,986 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:33:51,987 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:33:51,989 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:33:51,991 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:33:51,993 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:33:52,011 - INFO - Background image loaded and scaled.
+2024-11-18 11:33:52,014 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:33:52,016 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:33:52,018 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:33:52,021 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:33:52,025 - INFO - Initialized 9 buttons.
+2024-11-18 11:33:52,036 - INFO - WaveManager initialized.
+2024-11-18 11:46:25,112 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:46:25,280 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:46:25,282 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:46:25,285 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:46:25,286 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:46:25,287 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:46:25,289 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:46:25,290 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:46:25,291 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:46:25,292 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:46:25,293 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:46:25,310 - INFO - Background image loaded and scaled.
+2024-11-18 11:46:25,312 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:46:25,313 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:46:25,315 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:46:25,317 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:46:25,321 - INFO - Initialized 9 buttons.
+2024-11-18 11:46:25,332 - INFO - WaveManager initialized.
+2024-11-18 11:47:43,431 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:47:43,610 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:47:43,612 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:47:43,616 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:47:43,617 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:47:43,619 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:47:43,620 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:47:43,622 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:47:43,624 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:47:43,626 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:47:43,627 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:47:43,641 - INFO - Background image loaded and scaled.
+2024-11-18 11:47:43,645 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:47:43,646 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:47:43,650 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:47:43,653 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:47:43,656 - INFO - Initialized 9 buttons.
+2024-11-18 11:47:43,670 - INFO - WaveManager initialized.
+2024-11-18 11:49:25,239 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:49:25,361 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:49:25,362 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:49:25,365 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:49:25,365 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:49:25,368 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:49:25,370 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:49:25,371 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:49:25,371 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:49:25,374 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:49:25,376 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:49:25,396 - INFO - Background image loaded and scaled.
+2024-11-18 11:49:25,398 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:49:25,400 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:49:25,402 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:49:25,404 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:49:25,408 - INFO - Initialized 9 buttons.
+2024-11-18 11:49:25,417 - INFO - WaveManager initialized.
+2024-11-18 11:56:53,585 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:56:53,596 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:56:53,597 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:56:53,598 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:56:53,603 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:56:53,606 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:56:53,610 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:56:53,611 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:56:53,612 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:56:53,615 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:56:53,619 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:56:53,645 - INFO - Background image loaded and scaled.
+2024-11-18 11:56:53,653 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:56:53,657 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:56:53,665 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:56:53,673 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:56:53,694 - INFO - Initialized 9 buttons.
+2024-11-18 11:56:53,734 - INFO - WaveManager initialized.
+2024-11-18 11:57:00,412 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 11:57:00,545 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 11:57:00,548 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 11:57:00,553 - INFO - Enemies configuration loaded successfully.
+2024-11-18 11:57:00,557 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 11:57:00,563 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 11:57:00,567 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 11:57:00,569 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 11:57:00,571 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 11:57:00,573 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 11:57:00,574 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 11:57:00,595 - INFO - Background image loaded and scaled.
+2024-11-18 11:57:00,597 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 11:57:00,599 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 11:57:00,602 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 11:57:00,605 - INFO - Path surface created and path drawn successfully.
+2024-11-18 11:57:00,609 - INFO - Initialized 9 buttons.
+2024-11-18 11:57:00,619 - INFO - WaveManager initialized.
+2024-11-18 12:11:47,351 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:11:47,492 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:11:47,494 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:11:47,496 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:11:47,497 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:11:47,499 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:11:47,500 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:11:47,502 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:11:47,503 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:11:47,505 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:11:47,506 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:11:47,521 - INFO - Background image loaded and scaled.
+2024-11-18 12:11:47,524 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:11:47,526 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:11:47,528 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:11:47,531 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:11:47,536 - INFO - Initialized 9 buttons.
+2024-11-18 12:11:47,549 - INFO - WaveManager initialized.
+2024-11-18 12:13:58,939 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:13:58,975 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:13:58,977 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:13:58,981 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:13:58,984 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:13:58,987 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:13:58,988 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:13:58,990 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:13:58,993 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:13:58,995 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:13:58,996 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:13:59,014 - INFO - Background image loaded and scaled.
+2024-11-18 12:13:59,017 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:13:59,023 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:13:59,030 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:13:59,035 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:13:59,042 - INFO - Initialized 9 buttons.
+2024-11-18 12:13:59,054 - INFO - WaveManager initialized.
+2024-11-18 12:14:04,378 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:14:04,449 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:14:04,450 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:14:04,453 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:14:04,456 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:14:04,458 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:14:04,459 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:14:04,460 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:14:04,461 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:14:04,463 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:14:04,464 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:14:04,485 - INFO - Background image loaded and scaled.
+2024-11-18 12:14:04,488 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:14:04,491 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:14:04,495 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:14:04,498 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:14:04,503 - INFO - Initialized 9 buttons.
+2024-11-18 12:14:04,514 - INFO - WaveManager initialized.
+2024-11-18 12:15:13,137 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:15:13,161 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:15:13,164 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:15:13,169 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:15:13,172 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:15:13,176 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:15:13,180 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:15:13,183 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:15:13,188 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:15:13,191 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:15:13,193 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:15:13,212 - INFO - Background image loaded and scaled.
+2024-11-18 12:15:13,215 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:15:13,216 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:15:13,219 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:15:13,224 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:15:13,232 - INFO - Initialized 9 buttons.
+2024-11-18 12:15:13,241 - INFO - WaveManager initialized.
+2024-11-18 12:15:15,203 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:15:15,259 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:15:15,262 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:15:15,266 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:15:15,269 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:15:15,272 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:15:15,275 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:15:15,275 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:15:15,277 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:15:15,279 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:15:15,279 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:15:15,295 - INFO - Background image loaded and scaled.
+2024-11-18 12:15:15,298 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:15:15,300 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:15:15,302 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:15:15,304 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:15:15,307 - INFO - Initialized 9 buttons.
+2024-11-18 12:15:15,319 - INFO - WaveManager initialized.
+2024-11-18 12:19:08,368 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:19:08,492 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:19:08,493 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:19:08,495 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:19:08,496 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:19:08,497 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:19:08,499 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:19:08,501 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:19:08,502 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:19:08,504 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:19:08,505 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:19:08,522 - INFO - Background image loaded and scaled.
+2024-11-18 12:19:08,525 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:19:08,528 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:19:08,531 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:19:08,533 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:19:08,537 - INFO - Initialized 9 buttons.
+2024-11-18 12:19:08,549 - INFO - WaveManager initialized.
+2024-11-18 12:19:51,127 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:19:51,301 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:19:51,303 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:19:51,307 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:19:51,309 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:19:51,312 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:19:51,316 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:19:51,318 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:19:51,320 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:19:51,322 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:19:51,323 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:19:51,344 - INFO - Background image loaded and scaled.
+2024-11-18 12:19:51,347 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:19:51,348 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:19:51,350 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:19:51,355 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:19:51,360 - INFO - Initialized 9 buttons.
+2024-11-18 12:19:51,370 - INFO - WaveManager initialized.
+2024-11-18 12:21:09,542 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:21:09,634 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:21:09,636 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:21:09,638 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:21:09,638 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:21:09,640 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:21:09,642 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:21:09,643 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:21:09,644 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:21:09,645 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:21:09,647 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:21:09,664 - INFO - Background image loaded and scaled.
+2024-11-18 12:21:09,668 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:21:09,671 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:21:09,673 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:21:09,675 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:21:09,678 - INFO - Initialized 9 buttons.
+2024-11-18 12:21:09,692 - INFO - WaveManager initialized.
+2024-11-18 12:21:30,380 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:21:30,504 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:21:30,506 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:21:30,511 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:21:30,514 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:21:30,517 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:21:30,523 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:21:30,525 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:21:30,528 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:21:30,531 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:21:30,535 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:21:30,556 - INFO - Background image loaded and scaled.
+2024-11-18 12:21:30,560 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:21:30,562 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:21:30,565 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:21:30,567 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:21:30,571 - INFO - Initialized 9 buttons.
+2024-11-18 12:21:30,582 - INFO - WaveManager initialized.
+2024-11-18 12:22:22,286 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:22:22,456 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:22:22,459 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:22:22,462 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:22:22,465 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:22:22,470 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:22:22,473 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:22:22,475 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:22:22,476 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:22:22,479 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:22:22,481 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:22:22,497 - INFO - Background image loaded and scaled.
+2024-11-18 12:22:22,503 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:22:22,505 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:22:22,507 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:22:22,509 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:22:22,513 - INFO - Initialized 9 buttons.
+2024-11-18 12:22:22,525 - INFO - WaveManager initialized.
+2024-11-18 12:23:04,507 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:23:04,723 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:23:04,724 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:23:04,726 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:23:04,727 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:23:04,729 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:23:04,732 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:23:04,733 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:23:04,734 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:23:04,737 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:23:04,738 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:23:04,756 - INFO - Background image loaded and scaled.
+2024-11-18 12:23:04,759 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:23:04,762 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:23:04,763 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:23:04,766 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:23:04,770 - INFO - Initialized 9 buttons.
+2024-11-18 12:23:04,781 - INFO - WaveManager initialized.
+2024-11-18 12:24:59,005 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:24:59,217 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:24:59,219 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:24:59,222 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:24:59,224 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:24:59,227 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:24:59,229 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:24:59,230 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:24:59,231 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:24:59,233 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:24:59,234 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:24:59,250 - INFO - Background image loaded and scaled.
+2024-11-18 12:24:59,254 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:24:59,255 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:24:59,257 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:24:59,260 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:24:59,264 - INFO - Initialized 9 buttons.
+2024-11-18 12:24:59,275 - INFO - WaveManager initialized.
+2024-11-18 12:27:37,838 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:27:37,928 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:27:37,929 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:27:37,933 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:27:37,934 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:27:37,937 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:27:37,939 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:27:37,940 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:27:37,942 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:27:37,946 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:27:37,947 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:27:37,969 - INFO - Background image loaded and scaled.
+2024-11-18 12:27:37,972 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:27:37,974 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:27:37,976 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:27:37,979 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:27:37,984 - INFO - Initialized 9 buttons.
+2024-11-18 12:27:37,998 - INFO - WaveManager initialized.
+2024-11-18 12:28:34,259 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:28:34,394 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:28:34,395 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:28:34,398 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:28:34,399 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:28:34,403 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:28:34,405 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:28:34,406 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:28:34,407 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:28:34,409 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:28:34,411 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:28:34,431 - INFO - Background image loaded and scaled.
+2024-11-18 12:28:34,433 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:28:34,435 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:28:34,437 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:28:34,438 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:28:34,442 - INFO - Initialized 9 buttons.
+2024-11-18 12:28:34,452 - INFO - WaveManager initialized.
+2024-11-18 12:30:09,113 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:30:09,295 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:30:09,296 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:30:09,298 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:30:09,301 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:30:09,304 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:30:09,306 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:30:09,307 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:30:09,308 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:30:09,310 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:30:09,311 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:30:09,328 - INFO - Background image loaded and scaled.
+2024-11-18 12:30:09,331 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:30:09,334 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:30:09,336 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:30:09,337 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:30:09,341 - INFO - Initialized 9 buttons.
+2024-11-18 12:30:09,354 - INFO - WaveManager initialized.
+2024-11-18 12:30:16,641 - INFO - Wave 1 started with 6 enemies.
+2024-11-18 12:30:17,623 - INFO - Spawned enemy: Coal
+2024-11-18 12:30:18,635 - INFO - Spawned enemy: Coal
+2024-11-18 12:30:19,638 - INFO - Spawned enemy: Coal
+2024-11-18 12:30:19,691 - INFO - Slot 1 selected
+2024-11-18 12:30:20,640 - INFO - Spawned enemy: Coal
+2024-11-18 12:30:21,647 - INFO - Spawned enemy: Coal
+2024-11-18 12:30:21,707 - INFO - Placed tower 'steve' at [160, 224]
+2024-11-18 12:30:22,657 - INFO - Spawned enemy: Coal
+2024-11-18 12:31:56,229 - INFO - Loaded configuration from D:\pygame project\PygameProject\PygameProject\config\config.json
+2024-11-18 12:31:56,372 - INFO - Pygame initialized with screen size (959x704).
+2024-11-18 12:31:56,375 - INFO - Loading Enemies Config from: D:\pygame project\PygameProject\PygameProject\config\enemies.json
+2024-11-18 12:31:56,378 - INFO - Enemies configuration loaded successfully.
+2024-11-18 12:31:56,379 - INFO - Loading Towers Config from: D:\pygame project\PygameProject\PygameProject\config\towers
+2024-11-18 12:31:56,381 - INFO - Tower configuration loaded successfully: snow_golem.json
+2024-11-18 12:31:56,384 - INFO - Tower configuration loaded successfully: steve.json
+2024-11-18 12:31:56,385 - INFO - StageManager Initialized with Project Root: D:\pygame project\PygameProject\PygameProject
+2024-11-18 12:31:56,386 - INFO - Loading Stage Config from: D:\pygame project\PygameProject\PygameProject\config\stage\default.json
+2024-11-18 12:31:56,388 - INFO - Stage configuration 'default' loaded successfully.
+2024-11-18 12:31:56,390 - INFO - Background Image Path: D:\pygame project\PygameProject\PygameProject\config\images\background.png
+2024-11-18 12:31:56,406 - INFO - Background image loaded and scaled.
+2024-11-18 12:31:56,408 - INFO - Path Image Path: D:\pygame project\PygameProject\PygameProject\config\images\empty.png
+2024-11-18 12:31:56,410 - INFO - Path image loaded and scaled to: 64x64
+2024-11-18 12:31:56,412 - INFO - Walk Path Coordinates: [(1, 10), (1, 2), (3, 2), (3, 9), (5, 9), (5, 2), (7, 2), (7, 9), (9, 9), (9, 2), (11, 2), (11, 9), (13, 9), (13, 2), (14, 2)]
+2024-11-18 12:31:56,413 - INFO - Path surface created and path drawn successfully.
+2024-11-18 12:31:56,417 - INFO - Initialized 9 buttons.
+2024-11-18 12:31:56,430 - INFO - WaveManager initialized.
+2024-11-18 12:31:57,268 - INFO - Wave 1 started with 6 enemies.
+2024-11-18 12:31:58,267 - INFO - Spawned enemy: Coal
+2024-11-18 12:31:59,276 - INFO - Spawned enemy: Coal
+2024-11-18 12:32:00,276 - INFO - Spawned enemy: Coal
