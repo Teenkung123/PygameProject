@@ -1,6 +1,5 @@
 import pygame
 
-START_GAME = pygame.USEREVENT - 1
 ENEMY_REACHED_END = pygame.USEREVENT + 1
 PLAYER_GAME_OVER = pygame.USEREVENT + 2
 PLAYER_VICTORY = pygame.USEREVENT + 3
