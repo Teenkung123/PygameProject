@@ -2,8 +2,7 @@ from typing import TYPE_CHECKING
 
 import pygame
 
-from src import Events
-from src.Events import PLAYER_DAMAGED
+from src.Utils.Events import PLAYER_DAMAGED
 
 if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene

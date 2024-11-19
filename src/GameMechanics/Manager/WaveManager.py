@@ -4,7 +4,7 @@ import logging
 from typing import TYPE_CHECKING
 
 from src.GameMechanics.Entities.Enemy import Enemy
-from src.Events import PLAYER_VICTORY, STAGE_WAVE_END
+from src.Utils.Events import PLAYER_VICTORY, STAGE_WAVE_END
 
 if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene

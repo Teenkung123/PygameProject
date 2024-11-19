@@ -4,8 +4,8 @@ import pygame
 from pygame import Vector2
 from typing import TYPE_CHECKING
 
-from src.Events import PLAYER_INVENTORY_SELECTED
-from src.GameMechanics.Elements.Button import Button
+from src.Utils.Events import PLAYER_INVENTORY_SELECTED
+from src.Utils.Button import Button
 
 if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene

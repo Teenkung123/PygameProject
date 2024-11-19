@@ -6,7 +6,7 @@ import os
 
 from ConfigLoader import ConfigLoader
 from src.EventHandler import EventHandler
-from src.GradientUtils import GradientUtils
+from src.Utils.GradientUtils import GradientUtils
 from src.Scenes.GameScene import GameScene
 from src.Scenes.MainMenuScene import MainMenuScene
 

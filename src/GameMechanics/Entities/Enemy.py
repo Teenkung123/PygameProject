@@ -4,8 +4,8 @@ from typing import TYPE_CHECKING
 
 import pygame
 
-from src import Events
-from src.Events import ENEMY_REACHED_END
+from src.Utils import Events
+from src.Utils.Events import ENEMY_REACHED_END
 
 if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene
@@ -268,3 +268,33 @@ class Enemy(pygame.sprite.Sprite):
             next_node = pygame.math.Vector2(next_node_coords[0], next_node_coords[1])
             progress += self.__position.distance_to(next_node)
         return progress / self.__total_path_length
+
+    def getDebuffs(self):
+        """
+        Returns a list of current debuffs affecting the enemy.
+        Each debuff is represented as a dictionary containing its details.
+        """
+        debuffs = []
+
+        # Collect speed debuffs
+        for key, effect in self.__speedMultipliers.items():
+            debuff = {
+                'type': 'speed_reduction',
+                'source': key,
+                'multiplier': effect['multiplier'],
+                'remaining_duration_ms': effect['duration']
+            }
+            debuffs.append(debuff)
+
+        # Collect other effects (e.g., bleeding, burning)
+        for effect in self.__effects:
+            debuff = {
+                'type': effect['type'],
+                'source': effect['tower_type'],
+                'damage': effect['damage'],
+                'remaining_duration_ms': effect['duration'],
+                'time_since_last_application_s': effect['time_since_last_application']
+            }
+            debuffs.append(debuff)
+
+        return debuffs

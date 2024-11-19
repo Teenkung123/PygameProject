@@ -1,10 +1,9 @@
-import logging
 from typing import TYPE_CHECKING
 
 import pygame.event
 
-from src.Events import PLAYER_EXIT
-from src.GameMechanics.Elements.Button import Button
+from src.Utils.Events import PLAYER_EXIT
+from src.Utils.Button import Button
 
 if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene

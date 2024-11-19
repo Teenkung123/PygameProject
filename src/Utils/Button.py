@@ -1,7 +1,7 @@
 import pygame
 import time
 
-from src.GradientUtils import GradientUtils
+from src.Utils.GradientUtils import GradientUtils
 
 
 class Button:

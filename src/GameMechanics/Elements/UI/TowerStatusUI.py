@@ -2,7 +2,7 @@ from typing import TYPE_CHECKING
 
 import pygame
 
-from src.GameMechanics.Elements.Button import Button
+from src.Utils.Button import Button
 
 if TYPE_CHECKING:
     from src.Scenes.GameScene import GameScene

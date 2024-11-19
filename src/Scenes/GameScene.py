@@ -11,7 +11,7 @@ from src.GameMechanics.Manager.PlacementManager import PlacementManager
 from src.GameMechanics.Manager.StageManager import StageManager
 from src.GameMechanics.Manager.UIManager import UIManager
 from src.GameMechanics.Manager.WaveManager import WaveManager
-from src.GradientUtils import GradientUtils
+from src.Utils.GradientUtils import GradientUtils
 from src.Scenes.Scene import Scene
 
 if TYPE_CHECKING:

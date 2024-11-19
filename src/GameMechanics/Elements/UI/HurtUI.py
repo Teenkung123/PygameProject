@@ -1,6 +1,4 @@
-import logging
-
-from src.GameMechanics.Elements.Button import Button
+from src.Utils.Button import Button
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:

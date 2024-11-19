@@ -1,8 +1,8 @@
 from typing import TYPE_CHECKING
 
 from src.GameMechanics.Elements.UI.CurrencyUI import CurrencyUI
+from src.GameMechanics.Elements.UI.DebuffIndicator import DebuffIndicator
 from src.GameMechanics.Elements.UI.EnemyHealthBar import EnemyHealthBar
-from src.GameMechanics.Elements.UI.GameOverUI import GameOverUI
 from src.GameMechanics.Elements.UI.HealthBarUI import HealthBarUI
 from src.GameMechanics.Elements.InventoryElement import InventoryUI
 from src.GameMechanics.Elements.UI.HurtUI import HurtUI
@@ -17,7 +17,6 @@ if TYPE_CHECKING:
 
 class UIManager:
     def __init__(self, gameScene: 'GameScene'):
-        self.gameOverUI = GameOverUI(gameScene)
         self.healthUI = HealthBarUI(gameScene)
         self.currencyUI = CurrencyUI(gameScene)
         self.EnemyHealthUI = EnemyHealthBar(gameScene)
@@ -28,9 +27,7 @@ class UIManager:
         self.waveChangeUI = WaveChangeUI(gameScene)
         self.playerVictoryUI = PlayerVictoryUI(gameScene)
         self.playerLostUI = PlayerLostUI(gameScene)
-
-    def displayGameOver(self):
-        self.gameOverUI.display()
+        self.debuffIndicator = DebuffIndicator(gameScene)
 
     def updateHealthBar(self):
         self.healthUI.display()
@@ -46,6 +43,5 @@ class UIManager:
 
     def getHurtUI(self):
         return self.hurtUI
-
 
 

@@ -1,6 +1,6 @@
 import pygame
 
-from src.GameMechanics.Elements.Button import Button
+from src.Utils.Button import Button
 from src.Scenes.Scene import Scene
 from typing import TYPE_CHECKING
 

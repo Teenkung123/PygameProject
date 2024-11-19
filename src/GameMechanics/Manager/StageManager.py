@@ -2,7 +2,7 @@ import logging
 
 import pygame
 
-from src import Events
+from src.Utils import Events
 from src.GameMechanics.Elements.BackgroundElement import BackgroundElement
 from src.GameMechanics.Elements.PathElement import PathElement
 from src.GameMechanics.Configs.StageConfig import StageConfig
@@ -49,6 +49,7 @@ class StageManager:
             self.__main.getWaveManager().update(deltaTime)
             self.__main.getPlacementManager().tick(deltaTime)
             self.__main.getUIManager().currencyUI.tick(deltaTime)
+            self.__main.getUIManager().debuffIndicator.tick(deltaTime)
 
         self.__main.getStageManager().getBackground().draw()
         self.__main.getStageManager().getPath().draw()
@@ -60,6 +61,8 @@ class StageManager:
         self.__main.getUIManager().updateCurrency()
         self.__main.getUIManager().updateEnemyHealthBar()
         self.__main.getUIManager().updateHotbarInventory()
+
+        self.__main.getUIManager().debuffIndicator.draw()
 
         if self.__main.getUIManager().pauseUI.getPauseTimeMultiplier() > 0:
             self.__main.getUIManager().towerStatusUI.draw()

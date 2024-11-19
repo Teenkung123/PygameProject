@@ -1,11 +1,9 @@
-import logging
-
 import pygame
 
 from typing import TYPE_CHECKING
 
-from src import Events
-from src.Events import PLAYER_INVENTORY_SELECTED, ENEMY_KILLED, PLAYER_EXIT, STAGE_WAVE_END, PLAYER_VICTORY
+from src.Utils import Events
+from src.Utils.Events import PLAYER_INVENTORY_SELECTED, ENEMY_KILLED, PLAYER_EXIT, STAGE_WAVE_END, PLAYER_VICTORY
 from src.GameMechanics.Events import EnemyKill
 from src.GameMechanics.Events.EnemyReachEnd import EnemyReachEnd
 
