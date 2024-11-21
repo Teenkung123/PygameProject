@@ -59,6 +59,3 @@ class MainMenuScene(Scene):
 
         # Draw the Title Text
         self.__screen.blit(self.title_surface, self.title_rect)
-
-    def reset(self):
-        pass

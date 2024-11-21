@@ -1,5 +1,7 @@
 from typing import TYPE_CHECKING
 
+import pygame.image
+
 from src.Utils.Button import Button
 
 if TYPE_CHECKING:
@@ -15,6 +17,11 @@ class WaveChangeUI:
         self.__subtitle = self.__scene.getFont(32).render("", True, (255, 255, 255)).convert_alpha()
         self.__tick = 0
         self.__wave = 0
+        bar_width = scene.getStageManager().getStageConfig().getGridSize() * 2
+        bar_height = scene.getStageManager().getStageConfig().getGridSize() * 0.33
+        self.__img = pygame.image.load("config/images/UI/diamond_sword.png")
+        self.__img = pygame.transform.scale(self.__img, (30, 30))
+        self.__waveBg = Button(x=800,y=10,w=bar_width,h=bar_height,color=(0,0,0),text_color=(255,255,255),text_valign="center",text="0",font=scene.getFont(12))
         self.canStart = False
 
     def trigger(self, wave: int):
@@ -23,20 +30,23 @@ class WaveChangeUI:
         self.__background.visible = True
         self.canStart = False
 
-
+    def drawUI(self):
+        self.__waveBg.text = str(self.__wave + 1)
+        self.__waveBg.draw(self.__scene.getScreen())
 
     def tick(self, dt: float, ):
-        if self.__tick <= 2.3:
+        self.__scene.getScreen().blit(self.__img, (800 - 14, 10 - 6))
+        if self.__tick <= 5:
             self.__tick += dt
-            if self.__tick < 1 and self.__wave > 0:
+            if self.__tick < 2.5 and self.__wave > 0:
                 self.__title = self.__scene.getFont(64).render(f"Wave {self.__wave} Completed", True,(0, 255, 0)).convert_alpha()
                 self.__subtitle = self.__scene.getFont(32).render("Prepare for the next wave", True, (255, 255, 255)).convert_alpha()
-            elif self.__tick < 2 and self.__wave > 0:
+            elif self.__tick < 5 and self.__wave > 0:
                 self.__title = self.__scene.getFont(64).render("Next Wave", True, (0, 255, 0)).convert_alpha()
                 self.__subtitle = self.__scene.getFont(32).render(f"Wave {self.__wave + 1} Incoming", True, (255, 255, 255)).convert_alpha()
-            elif self.__tick >= 2:
+            elif self.__tick >= 5:
                 self.__background.visible = False
-                self.__tick = 4
+                self.__tick = 100
                 self.canStart = True
                 self.__scene.getWaveManager().startNextWave()
                 return

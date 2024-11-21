@@ -24,12 +24,14 @@ class WaveManager:
 
         self.__spawnedEnemy = pygame.sprite.Group()  # Group of spawned enemies
 
+
         logging.info("WaveManager initialized.")
 
     def startNextWave(self):
         self.__currentWave += 1
         wave_key = str(self.__currentWave)
         if wave_key in self.__waveConfig:
+            #self.__main.getStageManager().sound['wave'].play()
             wave_info = self.__waveConfig[wave_key]
             self.__spawnRate = wave_info.get("spawn_rate", 2.0)
             if not isinstance(self.__spawnRate, (int, float)) or self.__spawnRate <= 0:

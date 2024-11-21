@@ -21,6 +21,7 @@ class GameSceneHandler:
         scene.getUIManager().hotbarUI.handle_event(event)
         scene.getUIManager().pauseUI.handle_event(event)
         if (event.type == pygame.KEYDOWN and event.key == pygame.K_BACKSPACE) or (event.type == PLAYER_EXIT):
+            pygame.mixer.music.stop()
             self.__main.setCurrentScene("main")
             self.__main.resetScene("game")
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:

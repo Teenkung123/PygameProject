@@ -196,6 +196,7 @@ class Enemy(pygame.sprite.Sprite):
             del self.__speedMultipliers[key]
 
     def killEnemy(self):
+        #self.__main.getStageManager().sound['break'].play()
         pygame.event.post(pygame.event.Event(Events.ENEMY_KILLED, enemy=self))
         self.kill()
 

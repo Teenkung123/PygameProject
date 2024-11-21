@@ -15,6 +15,16 @@ class Main:
     def __init__(self):
         self.__running = True
         pygame.init()
+
+        try:
+            pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)
+            print("Mixer initialized successfully.")
+        except pygame.error as e:
+            print(f"Mixer initialization failed: {e}")
+            # Handle the error or exit
+            pygame.quit()
+            exit()
+
         self.__projectRoot = os.path.dirname(os.path.abspath(__file__))
         self.__config = ConfigLoader(os.path.join(self.__projectRoot, "config", "config.json"))
         self.__eventHandler = EventHandler(self)

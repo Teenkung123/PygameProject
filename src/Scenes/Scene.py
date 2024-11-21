@@ -9,6 +9,3 @@ class Scene:
 
     def tick(self, dt: float):
         pass
-
-    def reset(self):
-        pass

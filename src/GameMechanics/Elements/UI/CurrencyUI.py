@@ -31,7 +31,6 @@ class CurrencyUI:
 
 
     def __drawText(self):
-        player = self.__main.getPlayer()
         screen = self.__main.getScreen()
 
         text = self.__font.render(f"{self.__main.getCurrencyManager().getCurrency('gold')}", True, (255, 200, 0))

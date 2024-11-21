@@ -24,6 +24,12 @@ class StageManager:
         self.__isPaused = False
         self.isVictory = False
         self.isLost = False
+        self.sound = {
+            'wave': pygame.mixer.Sound("config/Sounds/Event_raidhorn1.ogg"),
+            'break': pygame.mixer.Sound("config/Sounds/Amethyst_break1.ogg")
+        }
+        pygame.mixer.music.load("config/Sounds/Minecraft.mp3")
+        pygame.mixer.music.play(-1)
 
 
     def getStageConfig(self):
@@ -50,18 +56,21 @@ class StageManager:
             self.__main.getPlacementManager().tick(deltaTime)
             self.__main.getUIManager().currencyUI.tick(deltaTime)
             self.__main.getUIManager().debuffIndicator.tick(deltaTime)
+            self.__main.getUIManager().getHurtUI().tick(deltaTime)
+            pygame.mixer.music.unpause()
+        else:
+            pygame.mixer.music.pause()
 
         self.__main.getStageManager().getBackground().draw()
         self.__main.getStageManager().getPath().draw()
         self.__main.getPlacementManager().draw()
         self.__main.getWaveManager().draw()
 
-        self.__main.getUIManager().getHurtUI().tick(deltaTime)
         self.__main.getUIManager().updateHealthBar()
         self.__main.getUIManager().updateCurrency()
         self.__main.getUIManager().updateEnemyHealthBar()
         self.__main.getUIManager().updateHotbarInventory()
-
+        self.__main.getUIManager().waveChangeUI.drawUI()
         self.__main.getUIManager().debuffIndicator.draw()
 
         if self.__main.getUIManager().pauseUI.getPauseTimeMultiplier() > 0:

@@ -8,7 +8,7 @@
     "damage": 0,
     "speed": 0.1,
     "range": 1,
-    "cost": 1,
+    "cost": 10,
     "burning_damage": 5,
     "burning_duration": 5000,
     "image": "config/images/Towers/lava/lava.png"
